@@ -1,0 +1,1443 @@
+<!doctype html>
+<html lang="ru" class="h-100">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TITLE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png?v=9B0AxQobae">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png?v=9B0AxQobae">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png?v=9B0AxQobae">
+    <link rel="manifest" href="../favicon/site.webmanifest?v=9B0AxQobae">
+    <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg?v=9B0AxQobae" color="#303ff0">
+    <link rel="shortcut icon" href="../favicon/favicon.ico?v=9B0AxQobae">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="../favicon/browserconfig.xml?v=9B0AxQobae">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=aad1d6d9-9640-4750-90e9-5fc4f43c303a"
+        type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
+</head>
+
+<body class="page">
+    <header class="header">
+        <div class="header__line header__line--top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col col-md-auto">
+                        <a href="/" class="header__logo logo d-flex">
+                            <img src="../img/logo.svg" alt="Прачка Сочи">
+                        </a>
+                    </div>
+                    <div class="col d-none d-md-flex justify-content-center">
+                        <a href="tel:+79302333332" class="header__tel">+7 <span>(930)</span> 23 33 332</a>
+                    </div>
+                    <div class="col d-none d-lg-flex justify-content-center align-items-center">
+                        <div class="header__text">Рассчитать заказ:</div>
+                        <div class="social-network">
+                            <ul class="social-network__list list">
+                                <li class="social-network__list-item">
+                                    <a href="#" class="social-network__image" target="_blank">
+                                        <img src="../img/icons/social-wp.svg" alt="">
+                                    </a>
+                                </li>
+                                <li class="social-network__list-item">
+                                    <a href="#" class="social-network__image" target="_blank">
+                                        <img src="../img/icons/social-vb.svg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <a href="/" class="button shop-cart">
+                            <span class="shop-cart__inner">
+                                <span class="shop-cart__header">
+                                    <span class="shop-cart__image"></span>
+                                    <span class="shop-cart__balloon" data-total-count>0</span>
+                                </span>
+                                <span class="shop-cart__main">
+                                    <span class="shop-cart__text"><span data-total-price>0</span> р</span>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col col-lg-auto d-none d-md-block">
+                        <a id="myBtn" href="#" class="header__button button button--color-pink button--theme-default">
+                            <span class="button__text">Оставить заявку</span>
+                        </a>
+                    </div>
+                    <div class="col-auto d-lg-none">
+                        <button data-drawer="drawer" class="hamburger hamburger--3dx d-flex js-hamburger" type="button">
+                            <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__line header__line--bottom d-none d-lg-block">
+            <div class="container">
+                <nav class="nav">
+                    <ul class="nav__list list">
+                        <li class="nav__list-item">
+                            <a href="#" class="nav__link">Тарифы</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="" class="nav__link">Все услуги</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="./pray-list.html" class="nav__link">Прайс-лист</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="./b2b.html" class="nav__link">B2B</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="./feedback.html" class="nav__link">Отзывы</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="section-products tabbed js-catalog">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 mb-4 pb-2">
+                        <div class="input-search">
+                            <label class="input-search__label">
+                                <input id="search-input" type="text" class="input-search__control"
+                                    placeholder="Введите текст для поиска">
+                            </label>
+                            <button type="button" class="button input-search__button"></button>
+                        </div>
+                    </div>
+                </div>
+                <ul class="nav tabbed__list list mb-sm-5 pb-sm-4" role="tablist">
+                    <li class="tabbed__list-item">
+                        <a class="tabbed__link active" id="tab-link-adult" data-toggle="tab" href="#tab-panel-adult"
+                            role="tab" aria-controls="tab-panel-adult" aria-selected="true">Вещи для взрослых</a>
+                    </li>
+                    <li class="tabbed__list-item">
+                        <a class="tabbed__link" id="tab-link-child" data-toggle="tab" href="#tab-panel-child" role="tab"
+                            aria-controls="tab-panel-child" aria-selected="false">Детские вещи</a>
+                    </li>
+                </ul>
+                <div class="row">
+                    <div class="col">
+                        <div class="tabbed__content pt-sm-0 pb-5 pb-sm-0">
+                            <div class="tabbed__panel fade show active" id="tab-panel-adult" role="tabpanel"
+                                aria-labelledby="tab-link-adult">
+                                <div class="row section-products__list js-isotope">
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Костюм офисный</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-16.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="1" data-product-price="150"
+                                                        data-product-title="Костюм офисный">
+                                                        <span class="button__text">Стирка - 150₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Джинсы</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-4.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="2" data-product-price="250"
+                                                        data-product-title="Джинсы">
+                                                        <span class="button__text">Стирка - 250₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Куртка</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-7.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="3" data-product-price="350"
+                                                        data-product-title="Куртка">
+                                                        <span class="button__text">Стирка - 350₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Майка</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-10.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="4" data-product-price="450"
+                                                        data-product-title="Майка">
+                                                        <span class="button__text">Стирка - 450₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Платье</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-2.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="5" data-product-price="550"
+                                                        data-product-title="Платье">
+                                                        <span class="button__text">Стирка - 550₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Свадебное платье</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-5.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="6" data-product-price="650"
+                                                        data-product-title="Свадебное платье">
+                                                        <span class="button__text">Стирка - 650₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Поло</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-8.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="7" data-product-price="750"
+                                                        data-product-title="Поло">
+                                                        <span class="button__text">Стирка - 750₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Рубашка</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-11.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="8" data-product-price="850"
+                                                        data-product-title="Рубашка">
+                                                        <span class="button__text">Стирка - 850₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Трусы</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-3.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="9" data-product-price="950"
+                                                        data-product-title="Трусы">
+                                                        <span class="button__text">Стирка - 950₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Халат</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-6.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="10" data-product-price="1050"
+                                                        data-product-title="Халат">
+                                                        <span class="button__text">Стирка - 1050₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Шорты</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-9.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="11" data-product-price="1150"
+                                                        data-product-title="Шорты">
+                                                        <span class="button__text">Стирка - 1150₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Юбка</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-12.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="12" data-product-price="1250"
+                                                        data-product-title="Юбка">
+                                                        <span class="button__text">Стирка - 1250₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Носки</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-13.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="13" data-product-price="1350"
+                                                        data-product-title="Носки">
+                                                        <span class="button__text">Стирка - 1350₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Толстовка</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-14.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="14" data-product-price="1450"
+                                                        data-product-title="Толстовка">
+                                                        <span class="button__text">Стирка - 1450₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Бюстгалтер</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-15.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="15" data-product-price="1550"
+                                                        data-product-title="Бюстгалтер">
+                                                        <span class="button__text">Стирка - 1550₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Плащ</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-1.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="16" data-product-price="1650"
+                                                        data-product-title="Плащ">
+                                                        <span class="button__text">Стирка - 1650₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabbed__panel fade" id="tab-panel-child" role="tabpanel"
+                                aria-labelledby="tab-link-child">
+                                <div class="row section-products__list js-isotope">
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Платье</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-2.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="17" data-product-price="1750"
+                                                        data-product-title="Платье">
+                                                        <span class="button__text">Стирка - 1750₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Свадебное платье</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-5.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="18" data-product-price="1850"
+                                                        data-product-title="Свадебное платье">
+                                                        <span class="button__text">Стирка - 1850₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Поло</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-8.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="19" data-product-price="1950"
+                                                        data-product-title="Поло">
+                                                        <span class="button__text">Стирка - 1950₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Рубашка</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-11.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="20" data-product-price="2050"
+                                                        data-product-title="Рубашка">
+                                                        <span class="button__text">Стирка - 2050₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Костюм офисный</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-16.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="21" data-product-price="2150"
+                                                        data-product-title="Костюм офисный">
+                                                        <span class="button__text">Стирка - 2150₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Джинсы</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-4.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="22" data-product-price="2250"
+                                                        data-product-title="Джинсы">
+                                                        <span class="button__text">Стирка - 2250₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Куртка</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-7.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="23" data-product-price="2350"
+                                                        data-product-title="Куртка">
+                                                        <span class="button__text">Стирка - 2350₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Майка</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-10.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="24" data-product-price="2450"
+                                                        data-product-title="Майка">
+                                                        <span class="button__text">Стирка - 2450₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Носки</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-13.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="25" data-product-price="2550"
+                                                        data-product-title="Носки">
+                                                        <span class="button__text">Стирка - 2550₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Толстовка</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-14.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="26" data-product-price="2650"
+                                                        data-product-title="Толстовка">
+                                                        <span class="button__text">Стирка - 2650₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Бюстгалтер</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-15.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="27" data-product-price="2750"
+                                                        data-product-title="Бюстгалтер">
+                                                        <span class="button__text">Стирка - 2750₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Плащ</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-1.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="28" data-product-price="2850"
+                                                        data-product-title="Плащ">
+                                                        <span class="button__text">Стирка - 2850₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Трусы</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-3.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="29" data-product-price="2950"
+                                                        data-product-title="Трусы">
+                                                        <span class="button__text">Стирка - 2950₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Халат</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-6.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="30" data-product-price="3050"
+                                                        data-product-title="Халат">
+                                                        <span class="button__text">Стирка - 3050₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Шорты</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-9.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="31" data-product-price="3150"
+                                                        data-product-title="Шорты">
+                                                        <span class="button__text">Стирка - 3150₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-products__list-item col-sm-6 col-md-4 col-xl-3">
+                                        <div class="card-product">
+                                            <div class="card-product__inner">
+                                                <div class="card-product__header">
+                                                    <h3 class="card-product__title">Юбка</h3>
+                                                </div>
+                                                <div class="card-product__main">
+                                                    <div class="card-product__image">
+                                                        <img src="../img/products/product-12.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <button type="button"
+                                                        class="card-product__button button button--color-blue button--theme-small button--empty mr-1"
+                                                        data-basket-add data-product-id="32" data-product-price="3250"
+                                                        data-product-title="Юбка">
+                                                        <span class="button__text">Стирка - 3250₽</span>
+                                                    </button>
+                                                    <button type="button" class="button p-1" data-toggle="tooltip"
+                                                        data-placement="top" title="Tooltip on top">
+                                                        <span class="icon icon--info"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto basket-container" id="basket">
+                        <div class="section-products__aside">
+                            <div
+                                class="section-products__card-basket section-products__card-basket card-basket card-basket--opened">
+                                <button type="button" class="card-basket__opener button shop-cart js-toggle-basket">
+                                    <span class="shop-cart__inner">
+                                        <span class="shop-cart__header">
+                                            <span class="shop-cart__image"></span>
+                                        </span>
+                                    </span>
+                                </button>
+                                <div class="card-basket__inner">
+                                    <div class="card-basket__header">
+                                        <div class="row mx-n2">
+                                            <div class="col px-2">
+                                                <div class="text text--md font-weight-bold mb-2">Итого</div>
+                                            </div>
+                                            <div class="col-auto px-2">
+                                                <div class="text text--pink text--md font-weight-bold mb-2"><span
+                                                        data-total-price>0</span> ₽
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-basket__main">
+                                        <div class="card-basket__group">
+                                            <div class="card-basket__item">
+                                                <div class="row mx-n1 align-items-center">
+                                                    <div class="col px-1">
+                                                        <div class="card-basket__item-title">Костюм офисный</div>
+                                                    </div>
+                                                    <div class="col-auto px-1">
+                                                        <div class="input-counter js-input-counter">
+                                                            <button type="button"
+                                                                class="button input-counter__decrement"
+                                                                data-decrement></button>
+                                                            <label class="input-counter__label" title="99 шт">
+                                                                <span class="input-counter__result">1 шт</span>
+                                                                <input type="number" value="1" data-unit=" шт"
+                                                                    class="sr-only">
+                                                            </label>
+                                                            <button type="button"
+                                                                class="button input-counter__increment"
+                                                                data-increment></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto px-1">
+                                                        <div class="card-basket__item-price">340 ₽</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-basket__item">
+                                                <div class="row mx-n1 align-items-center">
+                                                    <div class="col px-1">
+                                                        <div class="card-basket__item-title">Майка</div>
+                                                    </div>
+                                                    <div class="col-auto px-1">
+                                                        <div class="input-counter js-input-counter">
+                                                            <button type="button"
+                                                                class="button input-counter__decrement"
+                                                                data-decrement></button>
+                                                            <label class="input-counter__label" title="99 шт">
+                                                                <span class="input-counter__result">1 шт</span>
+                                                                <input type="number" value="1" data-unit=" шт"
+                                                                    class="sr-only">
+                                                            </label>
+                                                            <button type="button"
+                                                                class="button input-counter__increment"
+                                                                data-increment></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto px-1">
+                                                        <div class="card-basket__item-price">120 ₽</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-basket__item">
+                                                <div class="row mx-n1 align-items-center">
+                                                    <div class="col px-1">
+                                                        <div class="card-basket__item-title">Рубашка</div>
+                                                    </div>
+                                                    <div class="col-auto px-1">
+                                                        <div class="input-counter js-input-counter">
+                                                            <button type="button"
+                                                                class="button input-counter__decrement"
+                                                                data-decrement></button>
+                                                            <label class="input-counter__label" title="99 шт">
+                                                                <span class="input-counter__result">1 шт</span>
+                                                                <input type="number" value="1" data-unit=" шт"
+                                                                    class="sr-only">
+                                                            </label>
+                                                            <button type="button"
+                                                                class="button input-counter__increment"
+                                                                data-increment></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto px-1">
+                                                        <div class="card-basket__item-price">560 ₽</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-basket__item">
+                                                <div class="row mx-n1 align-items-center">
+                                                    <div class="col px-1">
+                                                        <div class="card-basket__item-title">Бюстгалтер</div>
+                                                    </div>
+                                                    <div class="col-auto px-1">
+                                                        <div class="input-counter js-input-counter">
+                                                            <button type="button"
+                                                                class="button input-counter__decrement"
+                                                                data-decrement></button>
+                                                            <label class="input-counter__label" title="99 шт">
+                                                                <span class="input-counter__result">1 шт</span>
+                                                                <input type="number" value="1" data-unit=" шт"
+                                                                    class="sr-only">
+                                                            </label>
+                                                            <button type="button"
+                                                                class="button input-counter__increment"
+                                                                data-increment></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto px-1">
+                                                        <div class="card-basket__item-price">450 ₽</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-basket__item">
+                                                <div class="row mx-n1 align-items-center">
+                                                    <div class="col px-1">
+                                                        <div class="card-basket__item-title">Джинсы</div>
+                                                    </div>
+                                                    <div class="col-auto px-1">
+                                                        <div class="input-counter js-input-counter">
+                                                            <button type="button"
+                                                                class="button input-counter__decrement"
+                                                                data-decrement></button>
+                                                            <label class="input-counter__label" title="99 шт">
+                                                                <span class="input-counter__result">1 шт</span>
+                                                                <input type="number" value="1" data-unit=" шт"
+                                                                    class="sr-only">
+                                                            </label>
+                                                            <button type="button"
+                                                                class="button input-counter__increment"
+                                                                data-increment></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto px-1">
+                                                        <div class="card-basket__item-price">430 ₽</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-basket__footer">
+                                        <div class="card-basket__text">*Обратите внимание, что окончательная информация
+                                            о
+                                            стоимости будет сформирована при обработке заказа. Общая сумма счета может
+                                            отличаться.
+                                        </div>
+                                        <a href="/" class="button button--color-pink button--theme-medium">
+                                            <span class="button__text">Заказать</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-8">
+                        <div class="section-products__desc mt-4 pt-5">
+                            * под химчисткой подразумевается обработка вещей в органических растворителях, а также
+                            чистка
+                            изделий и одежды из текстильных материалов с использованием воды в качестве растворителя
+                            (аквачистка).
+                            <br>** под стиркой не подразумевается услуги по удалению специфических загрязнений, то есть
+                            использования специальных пятновыводных препаратов.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__line">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-auto pr-lg-5 d-flex justify-content-center">
+                        <a href="#" class="footer__logo logo d-flex">
+                            <img src="../img/logo-white.svg" alt="Прачка Сочи">
+                        </a>
+                    </div>
+                    <div class="col-lg pl-xl-5">
+                        <ul class="footer__list list">
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__link">Тарифы</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__link">Все услуги</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__link">Прайс-лист</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__link">B2B</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__link">Отзывы</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-auto d-flex flex-column align-items-center">
+                        <a href="tel:+79181234567" class="footer__tel">+7 (918) 12 34 567</a>
+                        <div class="footer__social">
+                            <div class="footer__text">Рассчитать заказ:</div>
+                            <div class="social-network">
+                                <ul class="social-network__list list">
+                                    <li class="social-network__list-item">
+                                        <a href="#" class="social-network__image" target="_blank">
+                                            <img src="../img/icons/social-white-wp.svg" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="social-network__list-item">
+                                        <a href="#" class="social-network__image" target="_blank">
+                                            <img src="../img/icons/social-white-vb.svg" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-auto d-flex flex-column align-items-center">
+                        <a href="#" class="footer__button button button--color-white-mix button--theme-regular mb-2">
+                            <span class="button__text">Заказать стирку</span>
+                        </a>
+                        <a href="#" class="footer__policy">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="drawer" class="drawer js-drawer sr-only">
+        <div class="drawer__inner">
+            <div class="drawer__header d-flex align-items-center">
+                <a href="/" class="drawer__logo logo">
+                    <img src="../img/logo.svg" alt="">
+                </a>
+                <button data-drawer="drawer" class="hamburger hamburger--3dx d-flex ml-auto js-hamburger" type="button">
+                    <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+                </button>
+            </div>
+            <div class="drawer__main">
+                <a href="#" class="button shop-cart mb-4 ml-2">
+                    <span class="shop-cart__inner">
+                        <span class="shop-cart__header">
+                            <span class="shop-cart__image"></span>
+                            <span class="shop-cart__balloon" data-total-count>0</span>
+                        </span>
+                        <span class="shop-cart__main">
+                            <span class="shop-cart__text">1245 р</span>
+                        </span>
+                    </span>
+                </a>
+                <div class="drawer__nav">
+                    <ul class="drawer__nav-list list">
+                        <li class="drawer__nav-item">
+                            <a href="#" class="drawer__nav-link">Тарифы</a>
+                        </li>
+                        <li class="drawer__nav-item">
+                            <a href="#" class="drawer__nav-link">Все услуги</a>
+                        </li>
+                        <li class="drawer__nav-item">
+                            <a href="#" class="drawer__nav-link">Прайс-лист</a>
+                        </li>
+                        <li class="drawer__nav-item">
+                            <a href="#" class="drawer__nav-link">B2B</a>
+                        </li>
+                        <li class="drawer__nav-item">
+                            <a href="#" class="drawer__nav-link">Отзывы</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="drawer__footer">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                    <a href="tel:+79302333332" class="drawer__tel">+7 <span>(930)</span> 23 33 332</a>
+                    <div class="social-network">
+                        <ul class="social-network__list list">
+                            <li class="social-network__list-item">
+                                <a href="#" class="social-network__image" target="_blank">
+                                    <img src="../img/icons/social-wp.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="social-network__list-item">
+                                <a href="#" class="social-network__image" target="_blank">
+                                    <img src="../img/icons/social-vb.svg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="button" class="button button--color-pink button--theme-light button--empty w-100">
+                    <span class="button__text">Связаться</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- /.drawer -->
+    <div class="popup-fancybox popup-fancybox--theme-map" id="map-popup" style="display: none;">
+        <div class="popup-fancybox__inner">
+            <div class="map">
+                <div class="map__input pb-4">
+                    <div id="suggest-input">
+                        <div class="input-search">
+                            <label class="input-search__label">
+                                <input type="text" class="input-search__control" placeholder="Введите текст для поиска">
+                            </label>
+                            <button type="button" class="button input-search__button"></button>
+                        </div>
+                        <div class="input-validation__message"></div>
+                    </div>
+                </div>
+                <div class="map__box">
+                    <div class="map__control" id="map-main"></div>
+                    <button type="button" data-yandex-submit
+                        class="map__button button button--color-pink button--theme-default mb-2">
+                        <span class="button__text">Подтвердить</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- /#CallBack -->
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">×</span>
+            <div class="form" id="formModal">
+                <div class="form__box">
+                    <form class="js-form-validation" novalidate="novalidate">
+                        <div class="form__title form__title--gray font-weight-bold text-center">
+                            Быстрая
+                            заявка
+                        </div>
+                        <div class="input input--theme-default mb-2">
+                            <label class="input__label">
+                                <input type="text" name="name" class="input__control" placeholder="Имя" required="">
+                            </label>
+                            <div class="input-validation__message"></div>
+                        </div>
+                        <div class="input input--theme-default mb-2">
+                            <label class="input__label">
+                                <input type="tel" name="tel" class="input__control" placeholder="Телефон" required="">
+                            </label>
+                            <div class="input-validation__message"></div>
+                        </div>
+                        <div class="field-location mb-3">
+                            <label class="field-location__label">
+                                <input data-yandex-input="" type="text" name="address" class="field-location__input"
+                                    placeholder="Адрес доставки">
+                            </label>
+                            <a href="#map-popup" data-fancybox-map="" class="field-location__button button">
+                                <span class="field-location__text">Найти меня</span>
+                            </a>
+                        </div>
+                        <div class="checkbox mb-3 pb-1">
+                            <label class="checkbox__label">
+                                <input type="checkbox" name="agreement" class="checkbox__control">
+                                <span class="checkbox__text">
+                                    Даю согласие на обработку персональных данных и подтверждаю свое
+                                    ознакомление с <a href="#">политикой обработки персональных
+                                        данных</a> компании
+                                </span>
+                            </label>
+                            <div class="input-validation__message"></div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="button button--color-pink button--theme-default"
+                                id="submetSucces">
+                                <span class="button__text">Отправить</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /#map-popup -->
+            <div class="popup-fancybox popup-fancybox--theme-successful" id="successful-send" style="display: none;">
+                <div class="popup-fancybox__inner">
+                    <div class="icon icon--successful d-flex mx-auto mb-3">
+                        <svg width="70" height="70" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"
+                            fill="currentColor">
+                            <path
+                                d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M26,50C12.767,50,2,39.233,2,26 S12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z" />
+                            <path
+                                d="M38.252,15.336l-15.369,17.29l-9.259-7.407c-0.43-0.345-1.061-0.274-1.405,0.156c-0.345,0.432-0.275,1.061,0.156,1.406 l10,8C22.559,34.928,22.78,35,23,35c0.276,0,0.551-0.114,0.748-0.336l16-18c0.367-0.412,0.33-1.045-0.083-1.411 C39.251,14.885,38.62,14.922,38.252,15.336z" />
+                        </svg>
+                    </div>
+                    <div class="text-center">
+                        Спасибо!
+                        <br>Ваша заявка отправлена.
+                        <br>В ближайшее время мы с Вами свяжемся!
+                    </div>
+                </div>
+            </div>
+            <!-- /#successful-send -->
+        </div>
+
+    </div>
+
+    <!-- Scrool icon -->
+    <a href="#" class="to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- scrool top -->
+    <!-- <script>
+        const toTop = document.querySelector(".to-top");
+
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                toTop.classList.add("active");
+            } else {
+                toTop.classList.remove("active");
+            }
+        })
+    </script> -->
+
+    <!-- <script>
+
+        let modal = document.getElementById('myModal');
+        let btn = document.getElementById("myBtn");
+        let span = document.getElementsByClassName("close")[0];
+        let succesSend = document.getElementById('successful-send');
+        let sendSuccess = document.getElementById('submetSucces');
+        let formModal = document.getElementById('formModal');
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target === sendSuccess) {
+                modal.style.display = "none";
+                succesSend.style.display = "block";
+            }
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script> -->
+</body>
+
+</html>

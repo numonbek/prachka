@@ -1,0 +1,89 @@
+.pray-list{
+    font-family: Rubik;
+    font-style: normal;
+    color: #000;
+}
+
+.list{
+    &__container{
+        padding-top: 31px;
+        padding-bottom: 113px;
+    }
+    &__title{      
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 57px;
+        /* identical to box height */
+        
+
+        text-align: center;
+
+        color: #363636;
+    }
+
+}
+.list__items{
+    padding-top: 19px;
+    &-inner{
+        margin-top: 10px;
+        width: 100%;
+        & tr{
+            list-style-type: none;
+           
+        }
+    }
+}
+
+.list__item{
+    &-title{
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 135%;
+        padding-top: 57px;
+    }
+    &-ul{
+        
+        padding: 10px 0 0 0 ;
+        .list__item-li:nth-child(2n){
+            background-color: #F6FAFF;
+        }
+            
+    }
+    &-li{
+        display: flex;
+        padding: 24px 68px 22px 65px;
+        justify-content: space-between;
+    }
+    &-name{
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 135%;
+        margin-right: 15px;
+        cursor: pointer;
+        &:hover{
+            font-family: Rubik;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 135%;
+            /* or 24px */
+
+            text-decoration-line: underline;
+
+            color: #000000;
+        }
+    }
+    
+    &-price{
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 135%;
+        &--bold{
+            font-size: 24px;
+            line-height: 135%;
+            padding: 0 10px;
+        }
+    }
+ 
+   
+}

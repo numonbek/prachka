@@ -1,0 +1,63 @@
+.input {
+    &__label {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+
+        &:hover .input__control:not(:disabled) {
+            border-color: #ccc;
+        }
+    }
+
+    &__control {
+        padding: 0;
+        font-size: inherit;
+        border: 1px solid #E7E7E7;
+        background-color: #fff;
+        color: inherit;
+        order: 12;
+
+        &::placeholder {
+            color: #cecece;
+        }
+    }
+
+    textarea {
+        resize: none;
+        min-height: em(100);
+    }
+}
+
+
+// Themes
+.input--theme-default {
+    .input {
+        &__control {
+            padding: em(8) em(20);
+            border-radius: em(5);
+            line-height: em(18);
+            font-weight: 300;
+        }
+    }
+}
+
+.input--theme-accent {
+    .input {
+        &__label {
+            &:hover .input__control:not(:disabled) {
+                border-color: #e0e0e0;
+            }
+        }
+
+        &__control {
+            $font-size: 18;
+            font-size: em($font-size);
+            padding: em(16, $font-size) em(20, $font-size);
+            border-radius: em(5, $font-size);
+            line-height: em(21, $font-size);
+            border: 1px solid #fff;
+            font-weight: 300;
+        }
+    }
+}

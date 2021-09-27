@@ -1,0 +1,19 @@
+.section-services {
+    padding: em(80) 0 em(50);
+    background-color: #F2F6F6;
+
+    &__text {
+        $font-size: 14;
+        font-size: em($font-size);
+        font-weight: 300;
+        line-height: 160%;
+        color: #303FF0;
+    }
+}
+
+
+@media (max-width: 575px) {
+    .section-services {
+        padding: em(50) 0;
+    }
+}

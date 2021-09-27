@@ -1,0 +1,108 @@
+.tabbed {
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__list-item {
+        overflow: hidden;
+        border-top: 1px solid #303FF0;
+        border-bottom: 1px solid #303FF0;
+
+        &:first-child {
+            border-radius: em(5) 0 0 em(5);
+            border-left: 1px solid #303FF0;
+
+            .tabbed__link {
+                border-radius: 0 em(5) em(5) 0;
+            }
+        }
+
+        &:last-child {
+            border-radius: 0 em(5) em(5) 0;
+            border-right: 1px solid #303FF0;
+
+            .tabbed__link {
+                border-radius: em(5) 0 0 em(5);
+            }
+        }
+    }
+
+    &__link {
+        $font-size: 18;
+        display: flex;
+        font-size: em($font-size);
+        line-height: em(21, $font-size);
+        border-radius: em(5, $font-size);
+        padding: em(8, $font-size) em(50, $font-size);
+        text-align: center;
+        transition: color .1s ease-in, background-color .1s ease-in;
+        color: #303FF0;
+
+        &.active,
+        &:hover, &:focus {
+            text-decoration-line: none;
+            color: #fff;
+            background-color: #303FF0;
+        }
+    }
+
+    &__content {
+        padding-top: em(50);
+    }
+
+    &__panel:not(.active) {
+        display: none;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .tabbed {
+        &__link {
+            $font-size: 16;
+            font-size: em($font-size);
+            padding: em(6, $font-size) em(20, $font-size);
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .tabbed {
+        &__list {
+            flex-direction: column;
+        }
+
+        &__list-item {
+            border: 1px solid #303FF0;
+            border-bottom: 0;
+
+            &:first-child {
+                border-radius: em(5) em(5) 0 0;
+            }
+
+            &:last-child {
+                border-radius: 0;
+            }
+        }
+
+        &__link {
+            $font-size: 16;
+            border-radius: 0 !important;
+            padding: em(10, $font-size) em(20, $font-size);
+            display: flex;
+            justify-content: space-between;
+
+            &.active::after {
+                font-size: 20px;
+                content: '\0020⬅';
+            }
+        }
+
+        &__content {
+            border-radius: 0 0 em(5) em(5);
+            padding: em(40) em(15) em(10);
+            border: 1px solid #303FF0;
+        }
+    }
+}

@@ -1,0 +1,94 @@
+.swiper-custom {
+    position: relative;
+    padding-bottom: 30px;
+
+    .swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after {
+        content: '';
+        width: em(20);
+        height: em(35);
+        margin-right: em(4);
+        font-size: inherit;
+        background: url(../../../img/icons/swiper-arrow-prev.svg) center / contain no-repeat;
+    }
+
+    .swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
+        content: '';
+        width: em(20);
+        height: em(35);
+        margin-left: em(4);
+        font-size: inherit;
+        background: url(../../../img/icons/swiper-arrow-next.svg) center / contain no-repeat;
+    }
+
+    .swiper-button-prev, .swiper-container-rtl .swiper-button-next,
+    .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+        width: em(62);
+        height: em(62);
+        border-radius: 50%;
+        background-color: #303FF0;
+        box-shadow: 0 em(4) em(4) rgba(#000, .15);
+        transition: background-color .1s ease-in;
+
+        &:hover, &:focus {
+            background-color: darken(#303FF0, 5%);
+        }
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        margin-top: 0;
+        transform: translateY(-50%);
+    }
+
+    .swiper-pagination-bullet {
+        width: 15px;
+        height: 15px;
+        background-color: #DFDFDF;
+        transform: scale(.8);
+        transition: transform .1s ease-in;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: #303FF0;
+        transform: none
+    }
+
+    .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 5px;
+    }
+}
+
+
+@media (max-width: 1199px) {
+    .swiper-custom {
+        .swiper-button-prev, .swiper-container-rtl .swiper-button-next,
+        .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+            font-size: em(14);
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .swiper-custom {
+        .swiper-button-prev, .swiper-container-rtl .swiper-button-next,
+        .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+            font-size: em(12);
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .swiper-custom {
+        padding-bottom: 24px;
+
+        .swiper-button-prev, .swiper-container-rtl .swiper-button-next,
+        .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+            font-size: em(10);
+        }
+
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+        }
+    }
+}

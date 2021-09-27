@@ -1,0 +1,26 @@
+.input-validation {
+
+    &--invalid {
+        border-color: red !important;
+        color: red !important;
+
+        &::placeholder {
+            color: red !important;
+        }
+
+        & + .checkbox__label::before,
+        & + .radio__label::before {
+            border-color: red !important;
+        }
+    }
+
+    &--valid {
+    }
+
+    &__message {
+        font-size: em(12);
+    }
+
+    &__message .input-validation--invalid {
+    }
+}

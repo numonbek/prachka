@@ -1,0 +1,10 @@
+.section-partners {
+    padding: em(50) 0 em(70);
+}
+
+
+@media (max-width: 575px) {
+    .section-partners {
+        padding: em(40) 0 em(50);
+    }
+}

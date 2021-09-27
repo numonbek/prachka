@@ -1,0 +1,36 @@
+.checkbox {
+    display: block;
+
+    &__label {
+        display: inline-flex;
+        margin-bottom: 0;
+        cursor: pointer;
+    }
+
+    &__control {
+        cursor: pointer;
+        flex: 0 0 auto;
+        width: em(16);
+        height: em(16);
+        margin-right: em(12);
+    }
+
+    &__text {
+        $font-size: 12;
+        font-weight: 300;
+        font-size: em($font-size);
+        line-height: em(14, $font-size);
+        padding-top: em(1, $font-size);
+        color: #919191;
+
+        a {
+            color: #303FF0;
+            text-decoration-line: underline;
+
+            &:hover,
+            &:focus {
+                text-decoration-line: none;
+            }
+        }
+    }
+}

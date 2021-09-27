@@ -1,0 +1,103 @@
+.card-service {
+    &__inner {
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        border-radius: em(5);
+        padding: em(18) em(24) em(28) 0;
+        background: #fff url(../../../img/card-service-bg.svg) left center / contain no-repeat;
+        transition: box-shadow .1s ease-in;
+
+        &:hover, &:focus {
+            box-shadow: 0 0 em(15) #deddd8;
+        }
+    }
+
+    &__head {
+    }
+
+    &__main {
+        flex: 1 1 auto;
+        text-align: right;
+    }
+
+    &__image {
+        width: em(160);
+        height: em(160);
+        object-fit: contain;
+    }
+
+    &__title {
+        font-weight: bold;
+        $font-size: 30;
+        font-size: em($font-size);
+        line-height: em(34, $font-size);
+        margin-bottom: em(40, $font-size);
+        color: #303FF0;
+        word-break: break-word;
+
+        a {
+            color: inherit;
+        }
+    }
+
+    &__list {
+    }
+
+    &__list-item {
+        &:not(:last-child) {
+            margin-bottom: em(12);
+        }
+    }
+
+    &__item {
+        $font-size: 14;
+        font-size: em($font-size);
+        line-height: em(16, $font-size);
+    }
+
+    &__item-key {
+    }
+
+    &__item-value {
+        margin-left: em(10);
+        font-weight: bold;
+        color: #303FF0;
+    }
+}
+
+
+@media (max-width: 1199px) {
+    .card-service {
+        &__inner {
+        }
+
+        &__image {
+            width: em(100);
+            height: em(100);
+        }
+
+        &__list-item {
+            &:not(:last-child) {
+                margin-bottom: em(8);
+            }
+        }
+
+        &__title {
+            $font-size: 22;
+            font-size: em($font-size);
+            margin-bottom: em(22, $font-size);
+        }
+
+        &__item-value {
+            margin-left: em(2);
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .card-service {
+        &__inner {
+        }
+    }
+}

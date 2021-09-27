@@ -1,0 +1,66 @@
+.shop-cart {
+    overflow: hidden;
+    border-radius: em(4);
+
+    &:hover, &:focus {
+        background-color: rgba(#303FF0, .05);
+
+        .shop-cart__header {
+            transform: scale(1.1);
+        }
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        padding: em(4) em(12);
+    }
+
+    &__header {
+        position: relative;
+        transition: transform .1s ease-in;
+    }
+
+    &__main {
+        padding-left: em(18);
+    }
+
+    &__image {
+        flex: 0 0 auto;
+        display: flex;
+        width: em(35);
+        height: em(35);
+        background: url(../../../img/icons/shop-cart.svg) center / contain no-repeat;
+    }
+
+    &__balloon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transform: translateX(50%);
+        $font-size: 12;
+        font-weight: 500;
+        font-size: em($font-size);
+        min-width: em(22, $font-size);
+        min-height: em(22, $font-size);
+        padding: em(2, $font-size);
+        border: em(2, $font-size) solid #E61962;
+        background-color: #fff;
+        border-radius: 50%;
+        line-height: 112%;
+        color: #E61962;
+    }
+
+    &__text {
+        $font-size: 14;
+        display: inline-block;
+        font-size: em($font-size);
+        line-height: 112%;
+        color: #363636;
+    }
+}

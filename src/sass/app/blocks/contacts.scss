@@ -1,0 +1,22 @@
+.contacts {
+    &__item {
+        &[href] {
+            color: inherit;
+
+            &:hover, &:focus {
+                color: #444;
+            }
+        }
+    }
+
+    &__icon {
+        vertical-align: middle;
+        width: em(14);
+        height: em(14);
+        margin-right: em(4);
+    }
+
+    &__text {
+        vertical-align: middle;
+    }
+}

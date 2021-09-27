@@ -1,0 +1,10 @@
+.section-reviews {
+    padding: em(50) 0 em(60);
+}
+
+
+@media (max-width: 575px) {
+    .section-reviews {
+        padding: em(40) 0 em(50);
+    }
+}

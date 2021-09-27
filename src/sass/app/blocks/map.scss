@@ -1,0 +1,36 @@
+.map {
+    &__box {
+        position: relative;
+        padding-top: 69.7416974%;
+        background-color: #f2f2f2;
+    }
+
+    &__control {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__button {
+        position: absolute;
+        z-index: 1;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+
+@media (max-width: 575px) {
+    .map {
+        &__box {
+            padding-top: 120%;
+        }
+
+        &__button {
+            font-size: 12px;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+.content {
+    p {
+        $font-size: 14;
+        font-size: em($font-size);
+        line-height: em(16, $font-size);
+        margin-bottom: em(16, $font-size);
+    }
+}

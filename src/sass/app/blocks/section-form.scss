@@ -1,0 +1,16 @@
+.section-form {
+    padding: em(50) 0;
+    background-color: #ECECEC;
+}
+
+
+@media (max-width: 1199px) {
+    .section-form {
+        &__button {
+            .button__text {
+                font-size: em(20);
+            }
+        }
+    }
+}
+

@@ -1,0 +1,122 @@
+.footer {
+    &__line {
+        padding: em(40) 0 em(30);
+        background-color: #303FF0;
+        color: #fff;
+    }
+
+    &__list {
+        max-width: em(270);
+        margin: 0 em(-15);
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__list-item {
+        padding: 0 em(15);
+        flex: 0 0 50%;
+        max-width: 50%;
+
+        &:not(:last-child) {
+            margin-bottom: em(7);
+        }
+    }
+
+    &__link {
+        color: inherit;
+
+        &:hover, &:focus {
+            color: inherit;
+        }
+    }
+
+    &__tel {
+        display: inline-block;
+        $font-size: 24;
+        font-weight: bold;
+        font-size: em($font-size);
+        margin-bottom: em(6, $font-size);
+        line-height: 160%;
+        color: inherit;
+
+        &:hover, &:focus {
+            color: inherit;
+        }
+    }
+
+    &__text {
+        $font-size: 14;
+        font-size: em($font-size);
+        margin-right: em(32, $font-size);
+        line-height: 112%;
+    }
+
+    &__policy {
+        $font-size: 12;
+        font-size: em($font-size);
+        line-height: 160%;
+        color: inherit;
+
+        &:hover, &:focus {
+            color: inherit;
+        }
+    }
+
+    &__button {
+        font-size: em(14);
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+@media (max-width: 1199px) {
+    .footer {
+        &__logo {
+            font-size: 12px;
+        }
+
+        &__list-item {
+            $font-size: 14;
+            font-size: em($font-size);
+        }
+
+        &__tel {
+            $font-size: 22;
+            font-size: em($font-size);
+        }
+
+        &__text {
+            margin-right: em(15);
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .footer {
+        &__line {
+            padding: em(30) 0 em(40);
+        }
+
+        &__list {
+            max-width: initial;
+            margin: em(30) 0;
+            justify-content: center;
+        }
+
+        &__list-item {
+            flex: initial;
+
+            &:not(:last-child) {
+                border-right: 1px solid #6470ff;
+            }
+        }
+
+        &__social {
+            margin: em(2) 0 em(26);
+        }
+    }
+}

@@ -1,0 +1,10 @@
+.section-faq {
+    padding: em(50) 0;
+}
+
+
+@media (max-width: 575px) {
+    .section-faq {
+        padding: em(40) 0;
+    }
+}

@@ -1,0 +1,34 @@
+.popup-fancybox {
+    padding: 0;
+}
+
+
+.popup-fancybox--theme-default {
+    width: 500px;
+
+    .popup-fancybox {
+        &__inner {
+            padding: 42px 30px 30px;
+        }
+    }
+}
+
+.popup-fancybox--theme-successful {
+    width: 400px;
+
+    .popup-fancybox {
+        &__inner {
+            padding: 42px 30px 30px;
+        }
+    }
+}
+
+.popup-fancybox--theme-map {
+    width: 780px;
+
+    .popup-fancybox {
+        &__inner {
+            padding: 40px 15px 15px;
+        }
+    }
+}

@@ -1,0 +1,98 @@
+.header {
+    &__line {
+    }
+
+    &__line--top {
+        padding: em(16) 0;
+        background-color: rgba(#fff, .96);
+    }
+
+    &__line--bottom {
+        background-color: #303FF0;
+        color: #fff;
+    }
+
+    &__tel {
+        $font-size: 20;
+        font-weight: bold;
+        font-size: em($font-size);
+        line-height: 160%;
+        color: #363636;
+        transition: color .1s ease-in;
+
+        span {
+            color: #303FF0;
+            transition: color .1s ease-in;
+        }
+
+        &:hover, &:focus {
+            color: #E61962;
+            text-decoration-line: none;
+
+            span {
+                color: #E61962;
+            }
+        }
+    }
+
+    &__text {
+        $font-size: 14;
+        font-size: em($font-size);
+        margin-right: em(32, $font-size);
+        line-height: 112%;
+        color: #363636;
+    }
+}
+
+
+@media (max-width: 1199px) {
+    .header {
+        &__logo {
+            font-size: 12px;
+        }
+
+        &__tel {
+            $font-size: 16;
+            font-size: em($font-size);
+        }
+
+        &__text {
+            $font-size: 14;
+            margin-right: em(20, $font-size);
+        }
+
+        &__button {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding-top: 72px;
+
+        &__line--top {
+            z-index: 95;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: em(10) 0;
+            box-shadow: 0 0 em(10) rgba(#000, .1);
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        padding-top: 58px;
+
+        &__logo {
+            font-size: 10px;
+        }
+
+        &__line--top {
+            padding: em(6) 0;
+        }
+    }
+}

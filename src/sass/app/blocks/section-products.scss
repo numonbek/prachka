@@ -1,0 +1,24 @@
+.section-products {
+    padding: em(30) 0 em(70);
+
+    &__list {
+        margin-bottom: em(-84);
+    }
+
+    &__list-item {
+        margin-bottom: em(84);
+    }
+
+    &__aside {
+        height: 100%;
+        position: relative;
+    }
+
+    &__desc {
+        $font-size: 14;
+        font-size: em($font-size);
+        line-height: 160%;
+        text-align: center;
+        color: #A7A7A7;
+    }
+}

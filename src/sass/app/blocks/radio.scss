@@ -1,0 +1,101 @@
+.radio {
+    $boxWidth: 20 !default;
+    $boxHeight: 20 !default;
+    $tickWidth: 10 !default;
+    $tickHeight: 10 !default;
+    $spaceText: 10 !default;
+    $tickColor: 'e84244' !default;
+    $tickColorHover: 'af1517' !default;
+    $tickColorDisabled: 'cccccc' !default;
+    $borderColor: #e5e5e5 !default;
+    $borderColorHover: #e84244 !default;
+    $borderColorChecked: #e84244 !default;
+    $borderColorCheckedHover: #af1517 !default;
+    $borderColorDisabled: #e5e5e5 !default;
+    $borderColorDisabledChecked: #cccccc !default;
+    $bgColor: #ffffff !default;
+    $bgColorHover: #ffe8ec !default;
+    $bgColorChecked: #ffffff !default;
+    $bgColorCheckedHover: #ffffff !default;
+    $bgColorDisabled: #f7f6fa !default;
+    $bgColorDisabledChecked: #f7f6fa !default;
+
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    touch-action: manipulation;
+
+    &__input {
+        left: em($boxWidth/2);
+        top: em($boxHeight);
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        appearance: none;
+
+        & + .radio__label::before {
+            content: '';
+            flex: 0 0 auto;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: em($boxWidth);
+            height: em($boxWidth);
+            border: 1px solid $borderColorChecked;
+            user-select: none;
+            border-radius: 50%;
+            background: $bgColorChecked url('data:image/svg+xml,%3Csvg fill="%23#{$tickColor}" viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle cx="1" cy="1" r="1"/%3E%3C/svg%3E%0A') no-repeat center / em($tickWidth) em($tickHeight);
+        }
+
+        & + .radio__label:hover::before {
+            border-color: $borderColorCheckedHover;
+            background-color: $bgColorCheckedHover;
+            background-image: url('data:image/svg+xml,%3Csvg fill="%23#{$tickColorHover}" viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle cx="1" cy="1" r="1"/%3E%3C/svg%3E%0A');
+        }
+
+        &:not(:checked) + .radio__label::before {
+            border-color: $borderColor;
+            background-color: $bgColor;
+            background-image: none;
+        }
+
+        &:not(:checked) + .radio__label:hover::before {
+            border-color: $borderColorHover;
+            background-color: $bgColorHover;
+        }
+
+        &:not(:checked):disabled + .radio__label::before {
+            border-color: $borderColorDisabled !important;
+            background-color: $bgColorDisabled !important;
+            background-image: none;
+        }
+
+        &:disabled + .radio__label::before {
+            border-color: $borderColorDisabledChecked !important;
+            background-color: $bgColorDisabledChecked !important;
+            background-image: url('data:image/svg+xml,%3Csvg fill="%23#{$tickColorDisabled}" viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle cx="1" cy="1" r="1"/%3E%3C/svg%3E%0A');
+        }
+
+        &:disabled + .radio__label {
+            cursor: initial;
+        }
+
+        &:focus + .radio__label::before {
+            outline: 1px dotted #212121;
+            outline: 5px auto -webkit-focus-ring-color;
+        }
+    }
+
+    &__label {
+        display: inline-flex;
+        cursor: pointer;
+    }
+
+    &__text {
+        padding-left: em($spaceText);
+    }
+}

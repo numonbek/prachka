@@ -1,0 +1,55 @@
+.sticker {
+    &__inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    &__header {
+        margin-right: em(-27);
+    }
+
+    &__main {
+        min-width: em(303);
+        padding: em(12) em(22) em(12) em(42);
+        border-radius: em(5);
+        box-shadow: 0 0 em(5) rgba(#000, .1);
+        background-color: #fff;
+    }
+
+    &__image {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        display: inline-flex;
+        border-radius: 50%;
+        padding: em(8);
+        background-color: #303FF0;
+        box-shadow: 0 0 em(5) rgba(#000, .1);
+
+        img {
+            width: em(38);
+            height: em(38);
+            object-fit: contain;
+        }
+    }
+
+    &__text {
+        $font-size: 14;
+        font-weight: bold;
+        font-size: em($font-size);
+        line-height: em(16, $font-size);
+        color: #303FF0;
+    }
+}
+
+
+@media (max-width: 575px) {
+    .sticker {
+        font-size: 14px;
+
+        &__main {
+            min-width: initial !important;
+        }
+    }
+}

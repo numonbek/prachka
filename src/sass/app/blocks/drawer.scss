@@ -1,0 +1,117 @@
+.drawer {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overscroll-behavior: none;
+    transition: background-color .3s cubic-bezier(.4, 0, .2, 1);
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+        overflow-y: auto;
+        height: 100%;
+        width: 100%;
+        max-width: 400px;
+        background-color: #fff;
+        box-shadow: 0 0 7px rgba(#000, .7);
+        transform: translateX(-103%);
+        transition: transform .3s cubic-bezier(.4, 0, .2, 1);
+        backface-visibility: hidden;
+        //will-change: transform;
+    }
+
+    &__header {
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 0 em(3) rgba(#000, .3);
+        background-color: #FAF8F7;
+        padding: 6px 15px;
+    }
+
+    &__main {
+        padding: 24px 0 58px;
+        overflow-x: hidden;
+        flex: 1 1 auto;
+    }
+
+    &__footer {
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 0 em(3) rgba(#000, .3);
+        background-color: #FAF8F7;
+        padding: 13px 15px;
+    }
+
+    &__logo {
+        font-size: 10px;
+    }
+
+    &__nav {
+    }
+
+    &__nav-list {
+    }
+
+    &__nav-item {
+        color: #303FF0;
+        border-top: 1px solid #bfc3f5;
+
+        &:last-child {
+            border-bottom: 1px solid #bfc3f5;
+        }
+    }
+
+    &__nav-link {
+        display: block;
+        padding: 8px 15px;
+        color: #303FF0;
+
+        &:hover, &:focus {
+            color: #1020da;
+            background-color: #c6caff;
+            text-decoration-line: none;
+        }
+    }
+
+    &__tel {
+        font-weight: 500;
+        font-size: em(18);
+        color: #363636;
+        transition: color .1s ease-in;
+
+        span {
+            color: #303FF0;
+            transition: color .1s ease-in;
+        }
+
+        &:hover, &:focus {
+            color: #E61962;
+            text-decoration-line: none;
+
+            span {
+                color: #E61962;
+            }
+        }
+    }
+}
+
+.drawer--opened {
+    pointer-events: auto;
+    background-color: rgba(#000, .5) !important;
+
+    .drawer__inner {
+        transform: translateX(0) !important;
+    }
+}
+
+
+@media (max-width: 575px) {
+    .drawer__inner {
+        max-width: 100%;
+    }
+}

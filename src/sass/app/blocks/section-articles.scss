@@ -1,0 +1,11 @@
+.section-articles {
+    padding: em(50) 0;
+    background-color: #F6F6F6;
+}
+
+
+@media (max-width: 575px) {
+    .section-articles {
+        padding: em(40) 0;
+    }
+}

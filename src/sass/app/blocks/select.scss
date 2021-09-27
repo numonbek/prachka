@@ -1,0 +1,91 @@
+.select {
+    &__label {
+        cursor: pointer;
+        display: inline-flex;
+        flex-direction: column;
+        margin-bottom: 0;
+
+        &:hover .select__control:not(:disabled) {
+            border-color: #ccc;
+        }
+    }
+
+    &__control {
+        cursor: pointer;
+        font-size: inherit;
+        border: em(1) solid #E5E5E5;
+        padding: 0 em(35) 0 0;
+        background: #fff url('../../../img/icons/arrow-select.svg') no-repeat right 18px center;
+        appearance: none;
+        color: inherit;
+        order: 12;
+
+        &:disabled {
+            cursor: initial;
+            background-color: #f7f6fa;
+            color: #888;
+            filter: grayscale(1);
+
+            & + .select__text {
+                color: #888;
+            }
+        }
+
+        &:invalid {
+            color: #999999;
+
+            option {
+                color: #000;
+            }
+        }
+    }
+
+    textarea {
+        resize: none;
+        min-height: em(100);
+    }
+}
+
+.select--full-w {
+    .select__label {
+        width: 100% !important;
+    }
+
+    .select__control {
+        width: 100% !important;
+        min-width: initial !important;
+    }
+}
+
+
+// Themes
+.select--theme-default {
+    .select {
+        &__control {
+            width: em(300);
+            padding: em(10) em(16);
+            border-radius: em(6);
+            line-height: em(22);
+        }
+
+        &__text {
+            $font-size: 14;
+            font-weight: bold;
+            font-size: em($font-size);
+            margin-bottom: em(4, $font-size);
+        }
+    }
+}
+
+
+@media (max-width: 370px) {
+    .select--theme-default {
+        .select__control {
+            width: 100%;
+        }
+
+        .select__label {
+            width: 100%;
+        }
+    }
+}

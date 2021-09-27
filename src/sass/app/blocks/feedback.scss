@@ -1,0 +1,257 @@
+.feedback{
+    font-family: Rubik;
+    font-style: normal;
+    color: #000;
+    &__container{
+        padding-top: 31px;
+        & a{
+            text-decoration: none;
+        }
+    }
+
+    &__titles{
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 57px;
+        /* identical to box height */
+
+        text-align: center;
+
+        color: #363636;
+    }
+    &__button{
+        max-width: 242px;
+        height: 29px;
+        display: flex;
+        background-color: #303FF0;
+        color: white;
+        border-radius: 5px;
+        align-items: center;
+      
+        margin: 0 auto;
+        margin-top: -25px;
+        margin-bottom: 56px;
+        transition: all 0.5s ease;
+        
+    }
+    &__button:hover{
+        opacity: 0.7;
+    }
+    &__text{
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 160%;
+        /* identical to box height, or 29px */
+
+        text-align: center;
+        margin: 0 auto;
+        color: #FFFFFF;
+    }
+
+    &__callback{
+        background-color: #F6FAFF;
+    }
+}
+
+/* ==== Workers === */
+
+.workers{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 69px;
+    justify-content: space-around;
+    &__container{
+        display: flex;
+        max-width: 540px;
+        width: 100%;
+        padding-bottom: 83px;
+        justify-content: space-between;
+    }
+    &__photo{
+        display: flex;
+        max-width: 128px;
+        width: 33%;       
+        max-height: 128px;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-right: 29px;
+        & img{
+            width: 100%;
+            height: 100%;
+            object-fit: none;
+            object-position: center;
+        }
+    }
+    &__info{
+        max-width: 383px;
+        width: 77%;
+    }
+
+    &__name{
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 120%;
+        /* identical to box height, or 29px */
+
+
+        color: #303FF0;
+    }
+    &__employee{
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 120%;
+        padding-top: 5px;
+    }
+    &__description{
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 150%;
+        padding-top: 10px;
+    }
+}
+
+
+/* === DRAG DROP FILE === */
+
+.drag{
+    &__container{
+        display: flex;
+        align-items: center;
+    }
+    &__file{
+        margin-right: 20px;
+    }
+    &__title{
+        max-width: 184px;
+        max-height: 57px;
+        padding-right: 10px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+
+        color: #949494;
+    }
+
+}
+
+.five-mb{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #949494;
+    margin-bottom: 15px;
+}
+
+.checkbox--margin{
+    margin-top: 10px !important;
+}
+
+/* ==== Modeficators === */
+
+.form__box--callback{
+    max-width: 474px;
+    margin: 0 auto;
+    background-color: #F6FAFF;
+}
+
+.input__control--callborder{
+    border: 1px solid #929292;
+}
+
+
+/* === DRAG-N-DROP FILES =====*/
+
+.upload-file__input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    width: 0.4px;
+    height: 0.4px;
+}
+
+.fa-plus--style {
+    font-size: 37px;
+    padding: 27px;
+    color: #E0E0E0;
+}
+
+.upload-file__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    max-width: 80px;
+    max-height: 80px;
+    background: #FFFFFF;
+    border: 1px solid #929292;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.upload-file__icon {
+    width: 30px;
+    height: auto;
+    margin-right: 11px;
+}
+
+.upload-file__label .upload-file__text,
+.upload-file__label .upload-file__icon path {
+    transition: .25s ease;
+}
+
+.upload-file__label:hover .upload-file__text {
+    color: #58862D;
+}
+
+.upload-file__label:hover .upload-file__icon path {
+    fill: #58862D;
+}
+
+.upload-file__label:hover {
+    border: 2px dashed #58862D;
+}
+
+/* drag and drop - "hover" */
+.upload-file__label.hover .upload-file__text {
+    color: #ffb300;
+}
+
+.upload-file__label.hover .upload-file__icon path {
+    fill: #ffb300;
+}
+
+.upload-file__label.hover {
+    border: 2px dashed #ffb300;
+}
+
+/* drag and drop - ошибка */
+.upload-file__label.error .upload-file__text {
+    color: #d32f2f;
+}
+
+.upload-file__label.error .upload-file__icon path {
+    fill: #d32f2f;
+}
+
+.upload-file__label.error {
+    border: 2px dashed #d32f2f;
+}
+
+/* drag and drop - файл(ы) успешно перетянут(ы) */
+.upload-file__label.drop .upload-file__text {
+    color: #388e3c;
+}
+
+.upload-file__label.drop .upload-file__icon path {
+    fill: #388e3c;
+}
+
+.upload-file__label.drop {
+    border: 2px dashed #388e3c;
+}

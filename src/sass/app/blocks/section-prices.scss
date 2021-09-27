@@ -1,0 +1,11 @@
+.section-prices {
+    padding: em(60) 0 em(75);
+    background-color: #F6F6F6;
+}
+
+
+@media (max-width: 575px) {
+    .section-prices {
+        padding: em(40) 0 em(50);
+    }
+}

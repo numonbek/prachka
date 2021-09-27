@@ -1,0 +1,20 @@
+.section-office {
+    padding: em(50) 0 em(140);
+
+    &__title {
+        margin-bottom: 2em;
+    }
+}
+
+
+@media (max-width: 1199px) {
+    .section-office {
+        padding-bottom: em(120);
+    }
+}
+
+@media (max-width: 575px) {
+    .section-office {
+        padding: em(40) 0 em(65);
+    }
+}

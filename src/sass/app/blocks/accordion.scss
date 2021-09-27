@@ -1,0 +1,70 @@
+.accordion {
+    &__button {
+        display: flex;
+        align-items: center;
+        $font-size: 18;
+        font-weight: bold;
+        font-size: em($font-size);
+        line-height: em(21, $font-size);
+        padding: em(8, $font-size) em(30, $font-size);
+        border-radius: em(5, $font-size);
+        background-color: #303FF0;
+        color: #fff;
+        transition: background-color .1s ease-in;
+
+        &:hover, &:focus {
+            color: #fff;
+            background-color: darken(#303FF0, 10%);
+            text-decoration-line: none;
+        }
+
+        &::before {
+            content: '';
+            display: inline-flex;
+            flex: 0 0 auto;
+            width: em(24);
+            height: em(24);
+            margin-right: em(22);
+            background: url(../../../img/icons/plus.svg) center / contain no-repeat;
+        }
+
+        &[aria-expanded="true"]::before {
+            background-image: url(../../../img/icons/minus.svg);
+        }
+    }
+
+    &__panel {
+        padding: em(16) 0;
+    }
+}
+
+
+@media (max-width: 1199px) {
+    .accordion {
+        &__button {
+            font-size: em(16);
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .accordion {
+        &__button {
+            $font-size: 14;
+            font-size: em($font-size);
+            padding: em(10, $font-size) em(10, $font-size);
+
+            &::before {
+                margin-right: em(14, $font-size);
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .accordion {
+        &__panel {
+            font-size: 14px;
+        }
+    }
+}

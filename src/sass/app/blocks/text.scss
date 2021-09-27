@@ -1,0 +1,72 @@
+.text {
+    &--gray {
+        color: #4F4F4F;
+    }
+
+    &--pink {
+        color: #E61962;
+    }
+
+    &--lg {
+        $font-size: 48;
+        font-size: em($font-size);
+        margin-bottom: em(52, $font-size);
+        line-height: 1.15;
+    }
+
+    &--md {
+        $font-size: 36;
+        font-size: em($font-size);
+        margin-bottom: em(38, $font-size);
+        line-height: 1.15;
+    }
+}
+
+
+@media (max-width: 1199px) {
+    .text {
+        &--lg {
+            font-size: em(44);
+        }
+
+        &--md {
+            font-size: em(32);
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .text {
+        &--lg {
+            font-size: em(40);
+        }
+
+        &--md {
+            font-size: em(28);
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .text {
+        &--lg {
+            font-size: em(32);
+        }
+
+        &--md {
+            font-size: em(24);
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .text {
+        &--lg {
+            font-size: em(26);
+        }
+
+        &--md {
+            font-size: em(20);
+        }
+    }
+}

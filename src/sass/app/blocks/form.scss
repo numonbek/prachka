@@ -1,0 +1,28 @@
+.form {
+    &__box {
+        padding: em(30);
+        background: rgba(#fff, .8);
+        border-radius: em(5);
+    }
+
+    &__title {
+        $font-size: 24;
+        font-weight: 500;
+        font-size: em($font-size);
+        line-height: em(28, $font-size);
+        margin-bottom: em(22, $font-size);
+
+        &--gray {
+            color: #6F6F6F;
+        }
+    }
+}
+
+
+@media (max-width: 575px) {
+    .form {
+        &__box {
+            padding: em(15);
+        }
+    }
+}

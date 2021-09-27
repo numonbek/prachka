@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=aad1d6d9-9640-4750-90e9-5fc4f43c303a"
+        type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__line header__line--top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col col-md-auto">
+                        <a href="/" class="header__logo logo d-flex">
+                            <img src="../img/logo.svg" alt="Прачка Сочи">
+                        </a>
+                    </div>
+                    <div class="col d-none d-md-flex justify-content-center">
+                        <a href="tel:+79302333332" class="header__tel">+7 <span>(930)</span> 23 33 332</a>
+                    </div>
+                    <div class="col d-none d-lg-flex justify-content-center align-items-center">
+                        <div class="header__text">Рассчитать заказ:</div>
+                        <div class="social-network">
+                            <ul class="social-network__list list">
+                                <li class="social-network__list-item">
+                                    <a href="#" class="social-network__image" target="_blank">
+                                        <img src="../img/icons/social-wp.svg" alt="">
+                                    </a>
+                                </li>
+                                <li class="social-network__list-item">
+                                    <a href="#" class="social-network__image" target="_blank">
+                                        <img src="../img/icons/social-vb.svg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <a href="/" class="button shop-cart">
+                            <span class="shop-cart__inner">
+                                <span class="shop-cart__header">
+                                    <span class="shop-cart__image"></span>
+                                    <span class="shop-cart__balloon" data-total-count>0</span>
+                                </span>
+                                <span class="shop-cart__main">
+                                    <span class="shop-cart__text"><span data-total-price>0</span> р</span>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col col-lg-auto d-none d-md-block">
+                        <a id="myBtn" href="#" class="header__button button button--color-pink button--theme-default">
+                            <span class="button__text">Оставить заявку</span>
+                        </a>
+                    </div>
+                    <div class="col-auto d-lg-none">
+                        <button data-drawer="drawer" class="hamburger hamburger--3dx d-flex js-hamburger" type="button">
+                            <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__line header__line--bottom d-none d-lg-block">
+            <div class="container">
+                <nav class="nav">
+                    <ul class="nav__list list">
+                        <li class="nav__list-item">
+                            <a href="#" class="nav__link">Тарифы</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="" class="nav__link">Все услуги</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="./pray-list.html" class="nav__link">Прайс-лист</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="./b2b.html" class="nav__link">B2B</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="./feedback.html" class="nav__link">Отзывы</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="feedback">
+        <div class="container">
+            <div class="feedback__container">
+                <div class="feedback__titles">Отзывы</div>
+                <div class="workers">
+                    <div class="workers__container">
+                        <div class="workers__photo">
+                            <img src="../img/workers/employee01.jpg" alt="">
+                        </div>
+                        <div class="workers__info">
+                            <div class="workers__name">Ирина</div>
+                            <div class="workers__employee">Сотрудник какой-то компании</div>
+                            <div class="workers__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        </div>
+                    </div>
+                    <div class="workers__container">
+                        <div class="workers__photo">
+                            <img src="../img/workers/employee02.jpg" alt="">
+                        </div>
+                        <div class="workers__info">
+                            <div class="workers__name">Юрий</div>
+                            <div class="workers__employee">Сотрудник какой-то компании</div>
+                            <div class="workers__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        </div>
+                    </div>
+                    <div class="workers__container">
+                        <div class="workers__photo">
+                            <img src="../img/workers/employee02.jpg" alt="">
+                        </div>
+                        <div class="workers__info">
+                            <div class="workers__name">Валерия</div>
+                            <div class="workers__employee">Сотрудник какой-то компании</div>
+                            <div class="workers__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        </div>
+                    </div>
+                    <div class="workers__container">
+                        <div class="workers__photo">
+                            <img src="../img/workers/employee02.jpg" alt="">
+                        </div>
+                        <div class="workers__info">
+                            <div class="workers__name">Екатерина</div>
+                            <div class="workers__employee">Сотрудник какой-то компании</div>
+                            <div class="workers__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        </div>
+                    </div>
+                    <div class="workers__container">
+                        <div class="workers__photo">
+                            <img src="../img/workers/employee02.jpg" alt="">
+                        </div>
+                        <div class="workers__info">
+                            <div class="workers__name">Ирина</div>
+                            <div class="workers__employee">Сотрудник какой-то компании</div>
+                            <div class="workers__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        </div>
+                    </div>
+                    <div class="workers__container">
+                        <div class="workers__photo">
+                            <img src="../img/workers/employee02.jpg" alt="">
+                        </div>
+                        <div class="workers__info">
+                            <div class="workers__name">Сергей</div>
+                            <div class="workers__employee">Сотрудник какой-то компании</div>
+                            <div class="workers__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        </div>
+                    </div>
+                    <div class="workers__container">
+                        <div class="workers__photo">
+                            <img src="../img/workers/employee02.jpg" alt="">
+                        </div>
+                        <div class="workers__info">
+                            <div class="workers__name">Алексей</div>
+                            <div class="workers__employee">Сотрудник какой-то компании</div>
+                            <div class="workers__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        </div>
+                    </div>
+                    <div class="workers__container">
+                        <div class="workers__photo">
+                            <img src="../img/workers/employee02.jpg" alt="">
+                        </div>
+                        <div class="workers__info">
+                            <div class="workers__name">Ирина</div>
+                            <div class="workers__employee">Сотрудник какой-то компании</div>
+                            <div class="workers__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        </div>
+                    </div>
+                    <div class="workers__container">
+                        <div class="workers__photo">
+                            <img src="../img/workers/employee02.jpg" alt="">
+                        </div>
+                        <div class="workers__info">
+                            <div class="workers__name">Юрий</div>
+                            <div class="workers__employee">Сотрудник какой-то компании</div>
+                            <div class="workers__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        </div>
+                    </div>
+                    <div class="workers__container">
+                        <div class="workers__photo">
+                            <img src="../img/workers/employee02.jpg" alt="">
+                        </div>
+                        <div class="workers__info">
+                            <div class="workers__name">Ирина</div>
+                            <div class="workers__employee">Сотрудник какой-то компании</div>
+                            <div class="workers__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        </div>
+                    </div>
+                </div>
+                <a class="feedback__button" href="#"><span class=feedback__text>Показать еще</span></a>
+            </div>
+            .
+        </div>
+    </section>
+    <section class="feedback__callback">
+        <div class="container">
+
+            <div class="form__box form__box--callback">
+                <form class="js-form-validation" novalidate="novalidate">
+                    <div class="form__title form__title--gray font-weight-bold text-center">
+                        Быстрая
+                        заявка
+                    </div>
+                    <div class="input input--theme-default mb-2">
+                        <label class="input__label">
+                            <input type="text" name="name" class="input__control input__control--callborder"
+                                placeholder="Имя" required="">
+                        </label>
+                        <div class="input-validation__message"></div>
+                    </div>
+                    <div class="input input--theme-default mb-2">
+                        <label class="input__label">
+                            <input type="text" name="text" class="input__control input__control--callborder"
+                                placeholder="Должность или организация" required="">
+                        </label>
+                        <div class="input-validation__message"></div>
+                    </div>
+                    <div class="input input--theme-default mb-2">
+                        <label class="input__label">
+                            <textarea type="text" name="text" class="input__control input__control--callborder"
+                                placeholder="Ваш отзыв" required=""></textarea>
+                        </label>
+                        <div class="input-validation__message"></div>
+                    </div>
+                    <div class="drag__container">
+                        <div class="drag__file">
+                            <div class="upload-file__wrapper">
+                                <input type="file" name="files" id="upload-file__input" class="upload-file__input"
+                                    multiple accept="image/jpeg,image/png,image/gif">
+                                <label class="upload-file__label" for="upload-file__input">
+                                    <i class="fa fa-plus fa-plus--style" style="font-size:37px;"></i>
+
+                                </label>
+                            </div>
+                        </div>
+                        <div class="drag__title">Выберите фото или перетащите сюда, чтобы загрузить</div>
+                    </div>
+                    <span class="five-mb">Файл должен быть не более 5 МБ.</span>
+                    <div class="checkbox mb-3 pb-1 checkbox--margin">
+                        <label class="checkbox__label">
+                            <input type="checkbox" name="agreement" class="checkbox__control">
+                            <span class="checkbox__text">
+                                Даю согласие на обработку персональных данных и подтверждаю свое
+                                ознакомление с <a href="#">политикой обработки персональных
+                                    данных</a> компании
+                            </span>
+                        </label>
+                        <div class="input-validation__message"></div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="button button--color-pink button--theme-default">
+                            <span class="button__text">Отправить</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <!-- <div class="form">
+            </div> -->
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="footer__line">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-auto pr-lg-5 d-flex justify-content-center">
+                        <a href="#" class="footer__logo logo d-flex">
+                            <img src="../img/logo-white.svg" alt="Прачка Сочи">
+                        </a>
+                    </div>
+                    <div class="col-lg pl-xl-5">
+                        <ul class="footer__list list">
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__link">Тарифы</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__link">Все услуги</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__link">Прайс-лист</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__link">B2B</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__link">Отзывы</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-auto d-flex flex-column align-items-center">
+                        <a href="tel:+79181234567" class="footer__tel">+7 (918) 12 34 567</a>
+                        <div class="footer__social">
+                            <div class="footer__text">Рассчитать заказ:</div>
+                            <div class="social-network">
+                                <ul class="social-network__list list">
+                                    <li class="social-network__list-item">
+                                        <a href="#" class="social-network__image" target="_blank">
+                                            <img src="../img/icons/social-white-wp.svg" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="social-network__list-item">
+                                        <a href="#" class="social-network__image" target="_blank">
+                                            <img src="../img/icons/social-white-vb.svg" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-auto d-flex flex-column align-items-center">
+                        <a href="#" class="footer__button button button--color-white-mix button--theme-regular mb-2">
+                            <span class="button__text">Заказать стирку</span>
+                        </a>
+                        <a href="#" class="footer__policy">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- === Drawer === -->
+    <div id="drawer" class="drawer js-drawer sr-only">
+        <div class="drawer__inner">
+            <div class="drawer__header d-flex align-items-center">
+                <a href="/" class="drawer__logo logo">
+                    <img src="../img/logo.svg" alt="">
+                </a>
+                <button data-drawer="drawer" class="hamburger hamburger--3dx d-flex ml-auto js-hamburger" type="button">
+                    <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+                </button>
+            </div>
+            <div class="drawer__main">
+                <a href="#" class="button shop-cart mb-4 ml-2">
+                    <span class="shop-cart__inner">
+                        <span class="shop-cart__header">
+                            <span class="shop-cart__image"></span>
+                            <span class="shop-cart__balloon" data-total-count>0</span>
+                        </span>
+                        <span class="shop-cart__main">
+                            <span class="shop-cart__text">1245 р</span>
+                        </span>
+                    </span>
+                </a>
+                <div class="drawer__nav">
+                    <ul class="drawer__nav-list list">
+                        <li class="drawer__nav-item">
+                            <a href="#" class="drawer__nav-link">Тарифы</a>
+                        </li>
+                        <li class="drawer__nav-item">
+                            <a href="#" class="drawer__nav-link">Все услуги</a>
+                        </li>
+                        <li class="drawer__nav-item">
+                            <a href="#" class="drawer__nav-link">Прайс-лист</a>
+                        </li>
+                        <li class="drawer__nav-item">
+                            <a href="#" class="drawer__nav-link">B2B</a>
+                        </li>
+                        <li class="drawer__nav-item">
+                            <a href="#" class="drawer__nav-link">Отзывы</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="drawer__footer">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                    <a href="tel:+79302333332" class="drawer__tel">+7 <span>(930)</span> 23 33 332</a>
+                    <div class="social-network">
+                        <ul class="social-network__list list">
+                            <li class="social-network__list-item">
+                                <a href="#" class="social-network__image" target="_blank">
+                                    <img src="../img/icons/social-wp.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="social-network__list-item">
+                                <a href="#" class="social-network__image" target="_blank">
+                                    <img src="../img/icons/social-vb.svg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="button" class="button button--color-pink button--theme-light button--empty w-100">
+                    <span class="button__text">Связаться</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- /.drawer -->
+    <div class="popup-fancybox popup-fancybox--theme-map" id="map-popup" style="display: none;">
+        <div class="popup-fancybox__inner">
+            <div class="map">
+                <div class="map__input pb-4">
+                    <div id="suggest-input">
+                        <div class="input-search">
+                            <label class="input-search__label">
+                                <input type="text" class="input-search__control" placeholder="Введите текст для поиска">
+                            </label>
+                            <button type="button" class="button input-search__button"></button>
+                        </div>
+                        <div class="input-validation__message"></div>
+                    </div>
+                </div>
+                <div class="map__box">
+                    <div class="map__control" id="map-main"></div>
+                    <button type="button" data-yandex-submit
+                        class="map__button button button--color-pink button--theme-default mb-2">
+                        <span class="button__text">Подтвердить</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- /#CallBack -->
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">×</span>
+            <div class="form" id="formModal">
+                <div class="form__box">
+                    <form class="js-form-validation" novalidate="novalidate">
+                        <div class="form__title form__title--gray font-weight-bold text-center">
+                            Быстрая
+                            заявка
+                        </div>
+                        <div class="input input--theme-default mb-2">
+                            <label class="input__label">
+                                <input type="text" name="name" class="input__control" placeholder="Имя" required="">
+                            </label>
+                            <div class="input-validation__message"></div>
+                        </div>
+                        <div class="input input--theme-default mb-2">
+                            <label class="input__label">
+                                <input type="tel" name="tel" class="input__control" placeholder="Телефон" required="">
+                            </label>
+                            <div class="input-validation__message"></div>
+                        </div>
+                        <div class="field-location mb-3">
+                            <label class="field-location__label">
+                                <input data-yandex-input="" type="text" name="address" class="field-location__input"
+                                    placeholder="Адрес доставки">
+                            </label>
+                            <a href="#map-popup" data-fancybox-map="" class="field-location__button button">
+                                <span class="field-location__text">Найти меня</span>
+                            </a>
+                        </div>
+                        <div class="checkbox mb-3 pb-1">
+                            <label class="checkbox__label">
+                                <input type="checkbox" name="agreement" class="checkbox__control">
+                                <span class="checkbox__text">
+                                    Даю согласие на обработку персональных данных и подтверждаю свое
+                                    ознакомление с <a href="#">политикой обработки персональных
+                                        данных</a> компании
+                                </span>
+                            </label>
+                            <div class="input-validation__message"></div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="button button--color-pink button--theme-default"
+                                id="submetSucces">
+                                <span class="button__text">Отправить</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /#map-popup -->
+            <div class="popup-fancybox popup-fancybox--theme-successful" id="successful-send" style="display: none;">
+                <div class="popup-fancybox__inner">
+                    <div class="icon icon--successful d-flex mx-auto mb-3">
+                        <svg width="70" height="70" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"
+                            fill="currentColor">
+                            <path
+                                d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M26,50C12.767,50,2,39.233,2,26 S12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z" />
+                            <path
+                                d="M38.252,15.336l-15.369,17.29l-9.259-7.407c-0.43-0.345-1.061-0.274-1.405,0.156c-0.345,0.432-0.275,1.061,0.156,1.406 l10,8C22.559,34.928,22.78,35,23,35c0.276,0,0.551-0.114,0.748-0.336l16-18c0.367-0.412,0.33-1.045-0.083-1.411 C39.251,14.885,38.62,14.922,38.252,15.336z" />
+                        </svg>
+                    </div>
+                    <div class="text-center">
+                        Спасибо!
+                        <br>Ваша заявка отправлена.
+                        <br>В ближайшее время мы с Вами свяжемся!
+                    </div>
+                </div>
+            </div>
+            <!-- /#successful-send -->
+        </div>
+
+    </div>
+
+    <!-- Scrool icon -->
+    <a href="#" class="to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- scrool top -->
+
+
+    <!-- <script>
+
+        let modal = document.getElementById('myModal');
+        let btn = document.getElementById("myBtn");
+        let span = document.getElementsByClassName("close")[0];
+        let succesSend = document.getElementById('successful-send');
+        let sendSuccess = document.getElementById('submetSucces');
+        let formModal = document.getElementById('formModal');
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target === sendSuccess) {
+                modal.style.display = "none";
+                succesSend.style.display = "block";
+            }
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script> -->
+</body>
+
+</html>

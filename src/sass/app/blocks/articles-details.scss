@@ -1,0 +1,47 @@
+.articles{
+    &__container{
+        padding-top: 59px;
+        padding-bottom: 85px;
+    }
+    &__block{
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 54px;
+    }
+    &__details{}
+    &__photo{
+        width: 50%;
+        & img{
+            width: 100%;
+        }
+    }
+    &__description{
+        width: 50%;
+        padding-left: 30px;
+    }
+    &__title{
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 41px;
+        
+        color: #000000;
+    }
+    &__text{
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 150%;
+        /* or 27px */
+        
+
+
+        color: #000000;
+
+        &-bt{
+            padding-top: 54px;
+        }
+    }
+}

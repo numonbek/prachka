@@ -1,0 +1,567 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    user-select: none;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    cursor: pointer;
+    color: inherit;
+    text-align: center;
+    text-decoration-line: none;
+    background-color: transparent;
+    transition: color .1s ease-in, background-color .1s ease-in;
+
+    &:hover, &:focus {
+        color: inherit;
+        text-decoration-line: none;
+    }
+
+    &__icon {
+        margin-left: em(-4);
+
+        & + .button__text {
+            margin-left: em(7);
+        }
+    }
+
+    &__text {
+        text-overflow: ellipsis;
+        transition: color .1s ease-in;
+
+        & + .button__icon {
+            margin-left: em(7);
+        }
+    }
+}
+
+.button--full-w {
+    min-width: 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+.button--empty {
+    background-color: transparent !important;
+}
+
+
+// Colors
+.button--color-pink {
+    $accentColor: #E61962;
+
+    &:not(:disabled) {
+        background-color: $accentColor;
+        border-color: $accentColor;
+        color: $accentColor;
+
+        .button__text {
+            color: #fff;
+        }
+
+        &:hover, &:focus {
+            background-color: darken($accentColor, 7%);
+            border-color: darken($accentColor, 7%);
+            color: darken($accentColor, 7%);
+
+            .button__text {
+                color: #fff;
+            }
+        }
+
+        &:active {
+            background-color: $accentColor;
+            border-color: $accentColor;
+            color: $accentColor;
+
+            .button__text {
+                color: #fff;
+            }
+        }
+    }
+
+    &:disabled {
+        cursor: initial;
+        background-color: #f7f6fa;
+        border-color: #E5E5E5;
+
+        .button__text {
+            color: #888;
+        }
+    }
+
+    &.button--empty {
+        &:not(:disabled) {
+            color: $accentColor;
+
+            .button__text {
+                color: $accentColor;
+            }
+
+            &:hover, &:focus {
+                background-color: rgba($accentColor, .04) !important;
+                color: darken($accentColor, 7%);
+
+                .button__text {
+                    color: darken($accentColor, 7%);
+                }
+            }
+
+            &:active {
+                background-color: transparent !important;
+                color: $accentColor;
+
+                .button__text {
+                    color: $accentColor;
+                }
+            }
+        }
+
+        &:disabled {
+            cursor: initial;
+            background-color: #f7f6fa;
+            border-color: #E5E5E5;
+
+            .button__text {
+                color: #888;
+            }
+        }
+    }
+}
+
+.button--color-blue {
+    $accentColor: #303FF0;
+
+    &:not(:disabled) {
+        background-color: $accentColor;
+        border-color: $accentColor;
+        color: $accentColor;
+
+        .button__text {
+            color: #fff;
+        }
+
+        &:hover, &:focus {
+            background-color: darken($accentColor, 7%);
+            border-color: darken($accentColor, 7%);
+            color: darken($accentColor, 7%);
+
+            .button__text {
+                color: #fff;
+            }
+        }
+
+        &:active {
+            background-color: $accentColor;
+            border-color: $accentColor;
+            color: $accentColor;
+
+            .button__text {
+                color: #fff;
+            }
+        }
+    }
+
+    &:disabled {
+        cursor: initial;
+        background-color: #f7f6fa;
+        border-color: #E5E5E5;
+
+        .button__text {
+            color: #888;
+        }
+    }
+
+    &.button--empty {
+        &:not(:disabled) {
+            color: $accentColor;
+
+            .button__text {
+                color: $accentColor;
+            }
+
+            &:hover, &:focus {
+                background-color: rgba($accentColor, .04) !important;
+                color: darken($accentColor, 7%);
+
+                .button__text {
+                    color: darken($accentColor, 7%);
+                }
+            }
+
+            &:active {
+                background-color: transparent !important;
+                color: $accentColor;
+
+                .button__text {
+                    color: $accentColor;
+                }
+            }
+        }
+
+        &:disabled {
+            cursor: initial;
+            background-color: #f7f6fa;
+            border-color: #E5E5E5;
+
+            .button__text {
+                color: #888;
+            }
+        }
+    }
+}
+
+.button--color-white {
+    $accentColor: #fff;
+    $secondColor: #E61962;
+
+    &:not(:disabled) {
+        background-color: $accentColor;
+        border-color: $accentColor;
+        color: $accentColor;
+
+        .button__text {
+            color: $secondColor;
+        }
+
+        &:hover, &:focus {
+            background-color: darken($accentColor, 1%);
+            border-color: darken($accentColor, 1%);
+            color: darken($accentColor, 1%);
+
+            .button__text {
+                color: darken($secondColor, 7%);
+            }
+        }
+
+        &:active {
+            background-color: $accentColor;
+            border-color: $accentColor;
+            color: $accentColor;
+
+            .button__text {
+                color: $secondColor;
+            }
+        }
+    }
+
+    &:disabled {
+        cursor: initial;
+        background-color: #f7f6fa;
+        border-color: #E5E5E5;
+
+        .button__text {
+            color: #888;
+        }
+    }
+
+    &.button--empty {
+        &:not(:disabled) {
+            color: $accentColor;
+
+            .button__text {
+                color: $secondColor;
+            }
+
+            &:hover, &:focus {
+                background-color: rgba($accentColor, .04) !important;
+                color: darken($accentColor, 1%);
+
+                .button__text {
+                    color: darken($secondColor, 7%);
+                }
+            }
+
+            &:active {
+                background-color: transparent !important;
+                color: $accentColor;
+
+                .button__text {
+                    color: $secondColor;
+                }
+            }
+        }
+
+        &:disabled {
+            cursor: initial;
+            background-color: #f7f6fa;
+            border-color: #E5E5E5;
+
+            .button__text {
+                color: #888;
+            }
+        }
+    }
+}
+
+.button--color-white-mix {
+    $accentColor: #fff;
+    $secondColor: #E61962;
+    $shadowColor: #119BC5;
+
+    &:not(:disabled) {
+        background-color: $accentColor;
+        border-color: $accentColor;
+        color: $shadowColor;
+
+        .button__text {
+            color: $secondColor;
+        }
+
+        &:hover, &:focus {
+            background-color: darken($accentColor, 1%);
+            border-color: darken($accentColor, 1%);
+            color: darken($shadowColor, 1%);
+
+            .button__text {
+                color: darken($secondColor, 7%);
+            }
+        }
+
+        &:active {
+            background-color: $accentColor;
+            border-color: $accentColor;
+            color: $shadowColor;
+
+            .button__text {
+                color: $secondColor;
+            }
+        }
+    }
+
+    &:disabled {
+        cursor: initial;
+        background-color: #f7f6fa;
+        border-color: #E5E5E5;
+
+        .button__text {
+            color: #888;
+        }
+    }
+
+    &.button--empty {
+        &:not(:disabled) {
+            color: $shadowColor;
+
+            .button__text {
+                color: $secondColor;
+            }
+
+            &:hover, &:focus {
+                background-color: rgba($accentColor, .04) !important;
+                color: darken($shadowColor, 1%);
+
+                .button__text {
+                    color: darken($secondColor, 7%);
+                }
+            }
+
+            &:active {
+                background-color: transparent !important;
+                color: $shadowColor;
+
+                .button__text {
+                    color: $secondColor;
+                }
+            }
+        }
+
+        &:disabled {
+            cursor: initial;
+            background-color: #f7f6fa;
+            border-color: #E5E5E5;
+
+            .button__text {
+                color: #888;
+            }
+        }
+    }
+}
+
+
+// Themes
+.button--theme-default {
+    min-width: em(160);
+    min-height: em(40);
+    padding: em(6) em(12);
+    border-radius: em(5);
+    border: 1px solid;
+    line-height: 1.2;
+}
+
+.button--theme-bold {
+    position: relative;
+    min-width: em(314);
+    min-height: em(55);
+    padding: em(10) em(20);
+    border-radius: em(5);
+    border: 1px solid;
+    line-height: 1.2;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .3;
+        box-shadow: 0 em(4) em(20) currentColor;
+        transition: opacity .1s ease-in;
+    }
+
+    &:hover, &:focus {
+        &::before {
+            opacity: .4;
+        }
+    }
+
+    &:disabled::before {
+        display: none;
+    }
+
+    .button {
+        &__text {
+            $font-size: 24;
+            font-weight: 500;
+            font-size: em($font-size);
+            line-height: em(28, $font-size);
+        }
+    }
+}
+
+.button--theme-medium {
+    min-width: em(180);
+    min-height: em(32);
+    padding: 0 em(26);
+    border-radius: em(5);
+    border: 1px solid;
+    line-height: 1.2;
+
+    .button__text {
+        $font-size: 18;
+        font-size: em($font-size);
+    }
+}
+
+.button--theme-normal {
+    position: relative;
+    min-width: em(198);
+    min-height: em(40);
+    padding: em(4) em(20);
+    border-radius: em(5);
+    border: 1px solid;
+    line-height: 1.2;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .6;
+        box-shadow: 0 em(4) em(10) currentColor;
+        transition: opacity .1s ease-in;
+    }
+
+    &:hover, &:focus {
+        &::before {
+            opacity: .85;
+        }
+    }
+
+    &:disabled::before {
+        display: none;
+    }
+
+    .button {
+        &__text {
+            $font-size: 18;
+            font-size: em($font-size);
+        }
+    }
+}
+
+.button--theme-regular {
+    position: relative;
+    min-width: em(216);
+    min-height: em(44);
+    padding: em(4) em(20);
+    border-radius: em(5);
+    border: 1px solid;
+    line-height: 1.2;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .6;
+        box-shadow: 0 em(4) em(10) currentColor;
+        transition: opacity .1s ease-in;
+    }
+
+    &:hover, &:focus {
+        &::before {
+            opacity: .85;
+        }
+    }
+
+    &:disabled::before {
+        display: none;
+    }
+
+    .button {
+        &__text {
+            $font-size: 20;
+            font-weight: 500;
+            font-size: em($font-size);
+        }
+    }
+}
+
+.button--theme-light {
+    min-width: em(128);
+    min-height: em(30);
+    padding: em(1) em(15);
+    border-radius: em(5);
+    border: 1px solid;
+    line-height: 1.2;
+}
+
+.button--theme-small {
+    min-width: em(100);
+    min-height: em(26);
+    padding: em(1) em(24);
+    border-radius: em(5);
+    border: 1px solid;
+    line-height: 1.2;
+
+    .button {
+        &__text {
+            $font-size: 14;
+            font-size: em($font-size);
+        }
+    }
+}
+
+
+@media (max-width: 575px) {
+    .button--theme-bold {
+        min-width: em(260);
+        min-height: em(48);
+
+        .button {
+            &__text {
+                $font-size: 18;
+                font-size: em($font-size);
+            }
+        }
+    }
+}

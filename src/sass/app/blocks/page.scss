@@ -1,0 +1,40 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Ubuntu', sans-serif;
+    height: 100%;
+    margin: 0;
+    color: #000;
+
+    &--no-scroll {
+        overflow: hidden !important;
+    }
+
+    &--show-basket .card-basket__inner {
+        opacity: 1;
+        pointer-events: auto;
+        transition: opacity .1s ease-in .1s;
+    }
+
+    &:not(&--show-basket) .card-basket__inner {
+        width: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .1s ease-in;
+    }
+
+    &:not(&--show-basket) .card-basket__opener {
+        opacity: 0;
+        transform: none;
+        transition: transform .1s ease-in, opacity .1s ease-in, color .1s ease-in, background-color .1s ease-in;;
+    }
+
+    &:not(&--show-basket) .shop-cart__balloon,
+    &:not(&--show-basket) .shop-cart__main {
+        display: none;
+    }
+
+    &:not(&--show-basket) .basket-container {
+        padding: 0;
+    }
+}

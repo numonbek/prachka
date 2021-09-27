@@ -1,0 +1,27 @@
+.section-map {
+    padding: em(55) 0 em(80);
+
+    &__content {
+        $font-size: 18;
+        font-weight: 300;
+        font-size: em($font-size);
+        margin-bottom: em(28, $font-size);
+        line-height: 150%;
+    }
+}
+
+
+@media (max-width: 1199px) {
+    .section-map {
+        &__content {
+            $font-size: 16;
+            font-size: em($font-size);
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .section-map {
+        padding: em(40) 0 em(55);
+    }
+}

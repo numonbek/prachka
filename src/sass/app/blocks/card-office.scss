@@ -1,0 +1,61 @@
+.card-office {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__head {
+    }
+
+    &__body {
+        padding-top: em(34);
+    }
+
+    &__image {
+        width: em(135);
+        height: em(135);
+        object-fit: contain;
+    }
+
+    &__text {
+        $font-size: 18;
+        font-weight: 300;
+        font-size: em($font-size);
+        line-height: 150%;
+    }
+}
+
+
+@media (max-width: 1199px) {
+    .card-office {
+        &__image {
+            width: em(100);
+            height: em(100);
+            object-fit: contain;
+        }
+
+        &__body {
+            padding-top: em(20);
+        }
+
+        &__text {
+            $font-size: 16;
+            font-size: em($font-size);
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .card-office {
+        &__image {
+            width: em(80);
+            height: em(80);
+        }
+
+        &__body {
+            max-width: 300px;
+        }
+    }
+}

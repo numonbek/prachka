@@ -1,0 +1,540 @@
+$range-color: #000 !default;
+$track-color: $range-color !default;
+$thumb-color: $range-color !default;
+$progress-color: $range-color !default;
+$shadow-color: $range-color !default;
+$range-width: 15em !default;
+$track-height: .125em !default;
+$track-radius: .625em !default;
+$shadow-spread: .75em !default;
+$thumb-diameter: .75em !default;
+$thumb-radius: 50% !default;
+$track-disabled-color: black !default;
+$thumb-disabled-color: black !default;
+$thumb-disabled-scale: .6 !default;
+$thumb-shadow-duration: .2s !default;
+$range-disabled-opacity: .38 !default;
+$range-vertical-min-h: 15em !default;
+
+
+/* Track */
+@mixin track($progress: 0) {
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    height: $track-height;
+    background-color: rgba($track-color, .24);
+    border-radius: $track-radius;
+
+    @if $progress == 1 {
+        .js-range-progress & {
+            background: linear-gradient($progress-color, $progress-color) 0/var(--js-range-progress, 0) 100% no-repeat rgba($track-color, .24);
+        }
+    }
+}
+
+@mixin track-disabled {
+    background-color: rgba($track-disabled-color, $range-disabled-opacity);
+}
+
+/* Thumb */
+@mixin thumb {
+    box-sizing: border-box;
+    border: none;
+    width: $thumb-diameter;
+    height: $thumb-diameter;
+    background-color: $thumb-color;
+    border-radius: $thumb-radius;
+    transition: box-shadow $thumb-shadow-duration;
+}
+
+@mixin thumb-hover {
+    box-shadow: 0 0 0 $shadow-spread rgba($shadow-color, .04);
+}
+
+@mixin thumb-focus {
+    box-shadow: 0 0 0 $shadow-spread rgba($shadow-color, .12);
+}
+
+@mixin thumb-hover-focus {
+    box-shadow: 0 0 0 $shadow-spread rgba($shadow-color, .16);
+}
+
+@mixin thumb-active {
+    box-shadow: 0 0 0 $shadow-spread rgba($shadow-color, .24) !important;
+}
+
+@mixin thumb-disabled {
+    transform: scale($thumb-disabled-scale);
+    background-color: $thumb-disabled-color;
+    box-shadow: 0 0 0 $shadow-spread white !important;
+}
+
+@mixin setColorRange($conf:(), $fullColor: #000) {
+    $conf: map-merge((
+            trackColor: $fullColor,
+            thumbColor: $fullColor,
+            progressColor: $fullColor,
+            shadowColor: $fullColor,
+            thumbDisabledColor: $fullColor,
+            trackDisabledColor: $fullColor,
+            tooltipColor: $fullColor,
+            tooltipColorText: white,
+    ), $conf);
+
+
+    .range__tooltip-number {
+        background-color: map-get($conf, tooltipColor);
+        color: map-get($conf, tooltipColorText);
+    }
+
+    &.js-range-progress .range__control::-webkit-slider-runnable-track {
+        background: linear-gradient(map-get($conf, progressColor), map-get($conf, progressColor)) 0/var(--js-range-progress, 0) 100% no-repeat rgba(map-get($conf, trackColor), .24);
+    }
+
+    /* Webkit | Track */
+    .range__control::-webkit-slider-runnable-track {
+        background-color: rgba(map-get($conf, trackColor), .24);
+    }
+
+    /* Webkit | Thumb */
+    .range__control::-webkit-slider-thumb {
+        background-color: map-get($conf, thumbColor);
+    }
+
+    /* Webkit | Hover */
+    &:hover > .range__control::-webkit-slider-thumb {
+        box-shadow: 0 0 0 $shadow-spread rgba(map-get($conf, shadowColor), .04);
+    }
+
+    /* Webkit | Focus */
+    .range__control:focus::-webkit-slider-thumb {
+        box-shadow: 0 0 0 $shadow-spread rgba(map-get($conf, shadowColor), .12);
+    }
+
+    /* Webkit | Hover + Focus */
+    &:hover > .range__control:focus::-webkit-slider-thumb {
+        box-shadow: 0 0 0 $shadow-spread rgba(map-get($conf, shadowColor), .16);
+    }
+
+    /* Webkit | Active */
+    .range__control:active::-webkit-slider-thumb {
+        box-shadow: 0 0 0 $shadow-spread rgba(map-get($conf, shadowColor), .24) !important;
+    }
+
+    /* Webkit | Disabled */
+    .range__control:disabled::-webkit-slider-runnable-track {
+        background-color: rgba(map-get($conf, trackDisabledColor), $range-disabled-opacity);
+    }
+
+    .range__control:disabled::-webkit-slider-thumb {
+        background-color: map-get($conf, thumbDisabledColor);
+        box-shadow: 0 0 0 $shadow-spread white !important;
+    }
+
+
+    /* Moz | Track */
+    .range__control::-moz-range-track {
+        background-color: rgba(map-get($conf, trackColor), .24);
+    }
+
+    /* Moz | Thumb */
+    .range__control::-moz-range-thumb {
+        background-color: map-get($conf, thumbColor);
+    }
+
+    /* Moz | Progress */
+    .range__control::-moz-range-progress {
+        background-color: rgba(map-get($conf, trackColor), .24);
+        background-color: map-get($conf, progressColor);
+    }
+
+    /* Moz | Hover */
+    &:hover > .range__control::-moz-range-thumb {
+        box-shadow: 0 0 0 $shadow-spread rgba(map-get($conf, shadowColor), .04);
+    }
+
+    /* Moz | Focus */
+    .range__control:focus::-moz-range-thumb {
+        box-shadow: 0 0 0 $shadow-spread rgba(map-get($conf, shadowColor), .12);
+    }
+
+    /* Moz | Hover + Focus */
+    &:hover > .range__control:focus::-moz-range-thumb {
+        box-shadow: 0 0 0 $shadow-spread rgba(map-get($conf, shadowColor), .16);
+    }
+
+    /* Moz | Active */
+    .range__control:active::-moz-range-thumb {
+        box-shadow: 0 0 0 $shadow-spread rgba(map-get($conf, shadowColor), .24) !important;
+    }
+
+    /* Moz | Disabled */
+    .range__control:disabled::-moz-range-track {
+        background-color: rgba(map-get($conf, trackDisabledColor), $range-disabled-opacity);
+    }
+
+    .range__control:disabled::-moz-range-progress {
+        background-color: rgba(map-get($conf, trackDisabledColor), $range-disabled-opacity);
+    }
+
+    .range__control:disabled::-moz-range-thumb {
+        background-color: map-get($conf, thumbDisabledColor);
+        box-shadow: 0 0 0 $shadow-spread white !important;
+    }
+
+
+    /* MS | Thumb */
+    .range__control::-ms-thumb {
+        background-color: map-get($conf, thumbColor);
+    }
+
+    /* MS | Progress */
+    .range__control::-ms-fill-lower {
+        background-color: map-get($conf, progressColor);
+    }
+
+    .range__control::-ms-fill-upper {
+        background-color: rgba(map-get($conf, trackColor), .24);
+    }
+
+    /* MS | Hover */
+    &:hover > .range__control::-ms-thumb {
+        box-shadow: 0 0 0 $shadow-spread rgba(map-get($conf, shadowColor), .04);
+    }
+
+    /* MS | Focus */
+    .range__control:focus::-ms-thumb {
+        box-shadow: 0 0 0 $shadow-spread rgba(map-get($conf, shadowColor), .12);
+    }
+
+    /* MS | Hover + Focus */
+    &:hover > .range__control:focus::-ms-thumb {
+        box-shadow: 0 0 0 $shadow-spread rgba(map-get($conf, shadowColor), .16);
+    }
+
+    /* MS | Active */
+    .range__control:active::-ms-thumb {
+        box-shadow: 0 0 0 $shadow-spread rgba(map-get($conf, shadowColor), .24) !important;
+    }
+
+    /* MS | Disabled */
+    .range__control:disabled::-ms-fill-lower {
+        background-color: rgba(map-get($conf, trackDisabledColor), $range-disabled-opacity);
+    }
+
+    .range__control:disabled::-ms-fill-upper {
+        background-color: rgba(map-get($conf, trackDisabledColor), $range-disabled-opacity);
+    }
+
+    .range__control:disabled::-ms-thumb {
+        background-color: map-get($conf, thumbDisabledColor);
+        box-shadow: 0 0 0 $shadow-spread white !important;
+    }
+}
+
+
+/* Range */
+.range {
+    position: relative;
+    width: $range-width;
+    display: block;
+    margin: 0;
+
+    /* Input */
+    &__control {
+        $height: $thumb-diameter + ($shadow-spread*2);
+        position: relative;
+        user-select: none;
+        cursor: pointer;
+        padding: 0;
+        width: 100%;
+        height: $height;
+        top: $height*(2/3);
+        margin: 0 0 $height*(-1);
+        background-color: transparent;
+        font: 1em/1 arial, sans-serif;
+        -webkit-appearance: none;
+    }
+
+
+    /* Without Span */
+    &__control:last-child {
+        position: static;
+        margin: 0;
+    }
+
+    /* Span */
+    &__label {
+        display: inline-block;
+        margin-bottom: $thumb-diameter + ($shadow-spread*2);
+    }
+
+    &__tooltip {
+        $height: $thumb-diameter + ($shadow-spread*2);
+        position: absolute;
+        bottom: $height/2;
+        left: $thumb-diameter/2;
+        right: $thumb-diameter/2;
+        height: 0;
+        transform: translate(var(--js-range-progress, 0));
+        pointer-events: none;
+        user-select: none;
+        opacity: 0;
+        transition: opacity .1s linear;
+
+        &--visible {
+            opacity: 1;
+        }
+    }
+
+    &__tooltip-number {
+        $height: $thumb-diameter + ($shadow-spread*2);
+        position: absolute;
+        top: -$height/2;
+        left: 0;
+        transform: translate(-50%, -100%);
+        padding: .25em .5em;
+        border-radius: .18em;
+        background-color: black;
+        color: white;
+    }
+
+    /* Focus */
+    &__control:focus {
+        outline: none;
+    }
+
+    /* Disabled */
+    &__control:disabled {
+        cursor: default;
+        opacity: $range-disabled-opacity;
+    }
+
+    &__control:disabled + .range__label {
+        color: rgba(black, $range-disabled-opacity);
+    }
+
+
+    /* Webkit | Track */
+    &__control::-webkit-slider-runnable-track {
+        @include track(1);
+    }
+
+    /* Webkit | Thumb */
+    &__control::-webkit-slider-thumb {
+        @include thumb;
+        margin-top: ($track-height - $thumb-diameter)/2;
+        -webkit-appearance: none;
+    }
+
+    /* Webkit | Hover */
+    &:hover > .range__control::-webkit-slider-thumb {
+        @include thumb-hover;
+    }
+
+    /* Webkit | Focus */
+    &__control:focus::-webkit-slider-thumb {
+        @include thumb-focus;
+    }
+
+    /* Webkit | Hover + Focus */
+    &:hover > .range__control:focus::-webkit-slider-thumb {
+        @include thumb-hover-focus;
+    }
+
+    /* Webkit | Active */
+    &__control:active::-webkit-slider-thumb {
+        @include thumb-active;
+    }
+
+    /* Webkit | Disabled */
+    &__control:disabled::-webkit-slider-runnable-track {
+        @include track-disabled;
+    }
+
+    &__control:disabled::-webkit-slider-thumb {
+        @include thumb-disabled;
+        color: white; /* Safari */
+    }
+
+
+    /* Moz | Track */
+    &__control::-moz-range-track {
+        @include track;
+    }
+
+    /* Moz | Thumb */
+    &__control::-moz-range-thumb {
+        @include thumb;
+    }
+
+    /* Moz | Progress */
+    &__control::-moz-range-progress {
+        @include track;
+        background-color: $progress-color;
+    }
+
+    /* Moz | Hover */
+    &:hover > .range__control::-moz-range-thumb {
+        @include thumb-hover;
+    }
+
+    /* Moz | Focus */
+    &__control:focus::-moz-range-thumb {
+        @include thumb-focus;
+    }
+
+    /* Moz | Hover + Focus */
+    &:hover > .range__control:focus::-moz-range-thumb {
+        @include thumb-hover-focus;
+    }
+
+    /* Moz | Active */
+    &__control:active::-moz-range-thumb {
+        @include thumb-active;
+    }
+
+    /* Moz | Disabled */
+    &__control:disabled::-moz-range-track {
+        @include track-disabled;
+    }
+
+    &__control:disabled::-moz-range-progress {
+        @include track-disabled;
+    }
+
+    &__control:disabled::-moz-range-thumb {
+        @include thumb-disabled;
+    }
+
+    &__control::-moz-focus-outer {
+        border: none;
+    }
+
+
+    /* MS | Track */
+    &__control::-ms-track {
+        @include track;
+        padding: 0 $shadow-spread;
+        background-color: transparent;
+        color: transparent;
+    }
+
+    /* MS | Thumb */
+    &__control::-ms-thumb {
+        @include thumb;
+        margin: 0 $shadow-spread;
+    }
+
+    /* MS | Progress */
+    &__control::-ms-fill-lower {
+        background-color: $progress-color;
+        border-radius: $track-radius;
+    }
+
+    &__control::-ms-fill-upper {
+        @include track;
+    }
+
+    /* MS | Hover */
+    &:hover > .range__control::-ms-thumb {
+        @include thumb-hover;
+    }
+
+    /* MS | Focus */
+    &__control:focus::-ms-thumb {
+        @include thumb-focus;
+    }
+
+    /* MS | Hover + Focus */
+    &:hover > .range__control:focus::-ms-thumb {
+        @include thumb-hover-focus;
+    }
+
+    /* MS | Active */
+    &__control:active::-ms-thumb {
+        @include thumb-active;
+    }
+
+    /* MS | Disabled */
+    &__control:disabled::-ms-fill-lower {
+        @include track-disabled;
+    }
+
+    &__control:disabled::-ms-fill-upper {
+        @include track-disabled;
+    }
+
+    &__control:disabled::-ms-thumb {
+        @include thumb-disabled;
+    }
+
+    /* MS | Tooltip */
+    &__control::-ms-tooltip {
+        display: none;
+    }
+}
+
+
+// Sizes
+.range--size-s {
+    font-size: em(12);
+}
+
+.range--size-m {
+    font-size: em(16);
+}
+
+.range--size-l {
+    font-size: em(20);
+}
+
+
+// Colors
+.range--color-red {
+    @include setColorRange((), red);
+}
+
+.range--color-green {
+    @include setColorRange((), green);
+}
+
+.range--color-blue {
+    @include setColorRange((
+            thumbDisabledColor: #2196f3,
+            trackDisabledColor: #2196f3,
+    ), #2196f3);
+}
+
+.range--color-mix {
+    @include setColorRange((
+            trackColor: cyan,
+            thumbColor: orange,
+            progressColor: blue,
+            shadowColor: red,
+            thumbDisabledColor: green,
+            trackDisabledColor: red,
+    ));
+}
+
+
+// Themes
+.range--vertical {
+    $width: $thumb-diameter + ($shadow-spread*2);
+    float: left;
+    position: relative;
+    height: $range-width;
+    min-height: $range-vertical-min-h;
+    width: $width;
+
+    .range__control {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: $range-width;
+        min-width: $range-vertical-min-h;
+        height: $width;
+        transform: translate(-50%, -50%) rotate(-90deg);
+    }
+}

@@ -1,0 +1,10 @@
+.section-catalog {
+    padding: em(50) 0 em(80);
+}
+
+
+@media (max-width: 575px) {
+    .section-catalog {
+        padding: em(40) 0;
+    }
+}

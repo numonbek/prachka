@@ -1,0 +1,11 @@
+.section-team {
+    padding: em(50) 0 em(70);
+    background-color: #F7F7F7;
+}
+
+
+@media (max-width: 575px) {
+    .section-team {
+        padding: em(40) 0 em(55);
+    }
+}

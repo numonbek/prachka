@@ -1,0 +1,22 @@
+.section-features {
+    padding: em(50) 0;
+    background-color: #F7F7F7;
+
+    &__list {
+        counter-reset: item;
+    }
+
+    &__list-item {
+        .card-info__step::before {
+            content: counter(item);
+            counter-increment: item;
+        }
+    }
+}
+
+
+@media (max-width: 575px) {
+    .section-features {
+        padding: em(40) 0;
+    }
+}

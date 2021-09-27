@@ -1,0 +1,36 @@
+.breadcrumbs {
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #e7e7e7;
+
+    &__list {
+        padding: 10px 0;
+    }
+
+    &__list-item {
+        display: flex;
+        color: #6c6d79;
+    }
+
+    &__list-item:last-child {
+        color: #000;
+
+        &::before {
+            color: #6c6d79;
+        }
+    }
+
+    &__list-item:not(:first-child) {
+        &::before {
+            content: '/';
+            margin: 0 6px;
+        }
+    }
+
+    &__link {
+        color: inherit;
+
+        &:hover, &:focus {
+            color: inherit;
+        }
+    }
+}

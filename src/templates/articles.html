@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="ru" class="h-100">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TITLE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png?v=9B0AxQobae">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png?v=9B0AxQobae">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png?v=9B0AxQobae">
+    <link rel="manifest" href="../favicon/site.webmanifest?v=9B0AxQobae">
+    <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg?v=9B0AxQobae" color="#303ff0">
+    <link rel="shortcut icon" href="../favicon/favicon.ico?v=9B0AxQobae">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="../favicon/browserconfig.xml?v=9B0AxQobae">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=aad1d6d9-9640-4750-90e9-5fc4f43c303a"
+        type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
+</head>
+
+<body class="page">
+    <header class="header">
+        <div class="header__line header__line--top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col col-md-auto">
+                        <a href="/" class="header__logo logo d-flex">
+                            <img src="../img/logo.svg" alt="Прачка Сочи">
+                        </a>
+                    </div>
+                    <div class="col d-none d-md-flex justify-content-center">
+                        <a href="tel:+79302333332" class="header__tel">+7 <span>(930)</span> 23 33 332</a>
+                    </div>
+                    <div class="col d-none d-lg-flex justify-content-center align-items-center">
+                        <div class="header__text">Рассчитать заказ:</div>
+                        <div class="social-network">
+                            <ul class="social-network__list list">
+                                <li class="social-network__list-item">
+                                    <a href="#" class="social-network__image" target="_blank">
+                                        <img src="../img/icons/social-wp.svg" alt="">
+                                    </a>
+                                </li>
+                                <li class="social-network__list-item">
+                                    <a href="#" class="social-network__image" target="_blank">
+                                        <img src="../img/icons/social-vb.svg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <a href="/" class="button shop-cart">
+                            <span class="shop-cart__inner">
+                                <span class="shop-cart__header">
+                                    <span class="shop-cart__image"></span>
+                                    <span class="shop-cart__balloon" data-total-count>0</span>
+                                </span>
+                                <span class="shop-cart__main">
+                                    <span class="shop-cart__text"><span data-total-price>0</span> р</span>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col col-lg-auto d-none d-md-block">
+                        <a id="myBtn" href="#" class="header__button button button--color-pink button--theme-default">
+                            <span class="button__text">Оставить заявку</span>
+                        </a>
+                    </div>
+                    <div class="col-auto d-lg-none">
+                        <button data-drawer="drawer" class="hamburger hamburger--3dx d-flex js-hamburger" type="button">
+                            <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__line header__line--bottom d-none d-lg-block">
+            <div class="container">
+                <nav class="nav">
+                    <ul class="nav__list list">
+                        <li class="nav__list-item">
+                            <a href="#" class="nav__link">Тарифы</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="" class="nav__link">Все услуги</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="./pray-list.html" class="nav__link">Прайс-лист</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="./b2b.html" class="nav__link">B2B</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="./feedback.html" class="nav__link">Отзывы</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <!-- <section class="section-intro" style="background-image: url(../img/bg-intro.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-lg-7 col-xl-6">
+                    <h2 class="text text--gray text--lg font-weight-bold mb-3">Стирка с бесплатной доставкой</h2>
+                    <p class="section-intro__text">Сохраните Ваше время для близких, а стирку доверьте нам!</p>
+                    <div class="sticker mb-2">
+                        <div class="sticker__inner">
+                            <div class="sticker__header">
+                                <div class="sticker__image">
+                                    <img src="../img/icons/sticker-1.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="sticker__main">
+                                <div class="sticker__text">Стирка + глажка за 48 часов</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sticker mb-5">
+                        <div class="sticker__inner">
+                            <div class="sticker__header">
+                                <div class="sticker__image">
+                                    <img src="../img/icons/sticker-1.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="sticker__main">
+                                <div class="sticker__text">Удобное время доставки и забора</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-10 col-xl-9">
+                            <div class="form">
+                                <div class="form__box">
+                                    <form class="js-form-validation">
+                                        <div class="form__title form__title--gray font-weight-bold text-center">Быстрая
+                                            заявка
+                                        </div>
+                                        <div class="input input--theme-default mb-2">
+                                            <label class="input__label">
+                                                <input type="text" name="name" class="input__control" placeholder="Имя"
+                                                       required>
+                                            </label>
+                                            <div class="input-validation__message"></div>
+                                        </div>
+                                        <div class="input input--theme-default mb-2">
+                                            <label class="input__label">
+                                                <input type="tel" name="tel" class="input__control"
+                                                       placeholder="Телефон" required>
+                                            </label>
+                                            <div class="input-validation__message"></div>
+                                        </div>
+                                        <div class="field-location mb-3">
+                                            <label class="field-location__label">
+                                                <input type="text" name="address" class="field-location__input"
+                                                       placeholder="Адрес доставки">
+                                            </label>
+                                            <button type="button" class="field-location__button button">
+                                                <span class="field-location__text">Найти меня</span>
+                                            </button>
+                                        </div>
+                                        <div class="checkbox mb-3 pb-1">
+                                            <label class="checkbox__label">
+                                                <input type="checkbox" name="agreement" class="checkbox__control">
+                                                <span class="checkbox__text">
+                                                    Даю согласие на обработку персональных данных и подтверждаю свое ознакомление с <a
+                                                        href="#">политикой обработки персональных данных</a> компании
+                                                </span>
+                                            </label>
+                                            <div class="input-validation__message"></div>
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <button type="submit"
+                                                    class="button button--color-pink button--theme-default">
+                                                <span class="button__text">Отправить</span>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+        <section class="section-articles">
+            <div class="container">
+                <h1 class="text text--lg font-weight-bold text-center">Статьи</h1>
+                <div class="row mb-n5">
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <article class="card-article h-100">
+                            <div class="card-article__inner h-100">
+                                <div class="card-article__header">
+                                    <div class="card-article__image">
+                                        <img src="../img/articles/article-1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-article__main">
+                                    <time class="card-article__time" datetime="2020-04-19">19 апреля, 2020</time>
+                                    <h2 class="card-article__title">
+                                        <a href="#" class="stretched-link">Как стирать черные вещи</a>
+                                    </h2>
+                                    <div class="card-article__desc">
+                                        <p>Стирать вещи черного цвета еще та морока! Не каждая хозяйка знает, как
+                                            стирать
+                                            черные вещи правильно. После стирки какой-нибудь вашей вещи этого цвета
+                                            могут
+                                            появиться белесости или же белые катышки, разводы</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <article class="card-article h-100">
+                            <div class="card-article__inner h-100">
+                                <div class="card-article__header">
+                                    <div class="card-article__image">
+                                        <img src="../img/articles/article-1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-article__main">
+                                    <time class="card-article__time" datetime="2020-04-19">19 апреля, 2020</time>
+                                    <h2 class="card-article__title">
+                                        <a href="#" class="stretched-link">Как стирать черно белые вещи</a>
+                                    </h2>
+                                    <div class="card-article__desc">
+                                        <p>Стирать вещи черного цвета еще та морока! Не каждая хозяйка знает, как
+                                            стирать
+                                            черные вещи правильно. После стирки какой-нибудь вашей вещи этого цвета
+                                            могут
+                                            появиться белесости или же белые катышки, разводы</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <article class="card-article h-100">
+                            <div class="card-article__inner h-100">
+                                <div class="card-article__header">
+                                    <div class="card-article__image">
+                                        <img src="../img/articles/article-1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-article__main">
+                                    <time class="card-article__time" datetime="2020-04-19">19 апреля, 2020</time>
+                                    <h2 class="card-article__title">
+                                        <a href="#" class="stretched-link">Как стирать черные вещи</a>
+                                    </h2>
+                                    <div class="card-article__desc">
+                                        <p>Стирать вещи черного цвета еще та морока! Не каждая хозяйка знает, как
+                                            стирать
+                                            черные вещи правильно. После стирки какой-нибудь вашей вещи этого цвета
+                                            могут
+                                            появиться белесости или же белые катышки, разводы</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <article class="card-article h-100">
+                            <div class="card-article__inner h-100">
+                                <div class="card-article__header">
+                                    <div class="card-article__image">
+                                        <img src="../img/articles/article-1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-article__main">
+                                    <time class="card-article__time" datetime="2020-04-19">19 апреля, 2020</time>
+                                    <h2 class="card-article__title">
+                                        <a href="#" class="stretched-link">Как стирать черные вещи</a>
+                                    </h2>
+                                    <div class="card-article__desc">
+                                        <p>Стирать вещи черного цвета еще та морока! Не каждая хозяйка знает, как
+                                            стирать
+                                            черные вещи правильно. После стирки какой-нибудь вашей вещи этого цвета
+                                            могут
+                                            появиться белесости или же белые катышки, разводы</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <article class="card-article h-100">
+                            <div class="card-article__inner h-100">
+                                <div class="card-article__header">
+                                    <div class="card-article__image">
+                                        <img src="../img/articles/article-1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-article__main">
+                                    <time class="card-article__time" datetime="2020-04-19">19 апреля, 2020</time>
+                                    <h2 class="card-article__title">
+                                        <a href="#" class="stretched-link">Как стирать черно белые вещи</a>
+                                    </h2>
+                                    <div class="card-article__desc">
+                                        <p>Стирать вещи черного цвета еще та морока! Не каждая хозяйка знает, как
+                                            стирать
+                                            черные вещи правильно. После стирки какой-нибудь вашей вещи этого цвета
+                                            могут
+                                            появиться белесости или же белые катышки, разводы</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <article class="card-article h-100">
+                            <div class="card-article__inner h-100">
+                                <div class="card-article__header">
+                                    <div class="card-article__image">
+                                        <img src="../img/articles/article-1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-article__main">
+                                    <time class="card-article__time" datetime="2020-04-19">19 апреля, 2020</time>
+                                    <h2 class="card-article__title">
+                                        <a href="#" class="stretched-link">Как стирать черные вещи</a>
+                                    </h2>
+                                    <div class="card-article__desc">
+                                        <p>Стирать вещи черного цвета еще та морока! Не каждая хозяйка знает, как
+                                            стирать
+                                            черные вещи правильно. После стирки какой-нибудь вашей вещи этого цвета
+                                            могут
+                                            появиться белесости или же белые катышки, разводы</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <article class="card-article h-100">
+                            <div class="card-article__inner h-100">
+                                <div class="card-article__header">
+                                    <div class="card-article__image">
+                                        <img src="../img/articles/article-1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-article__main">
+                                    <time class="card-article__time" datetime="2020-04-19">19 апреля, 2020</time>
+                                    <h2 class="card-article__title">
+                                        <a href="#" class="stretched-link">Как стирать черные вещи</a>
+                                    </h2>
+                                    <div class="card-article__desc">
+                                        <p>Стирать вещи черного цвета еще та морока! Не каждая хозяйка знает, как
+                                            стирать
+                                            черные вещи правильно. После стирки какой-нибудь вашей вещи этого цвета
+                                            могут
+                                            появиться белесости или же белые катышки, разводы</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <article class="card-article h-100">
+                            <div class="card-article__inner h-100">
+                                <div class="card-article__header">
+                                    <div class="card-article__image">
+                                        <img src="../img/articles/article-1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-article__main">
+                                    <time class="card-article__time" datetime="2020-04-19">19 апреля, 2020</time>
+                                    <h2 class="card-article__title">
+                                        <a href="#" class="stretched-link">Как стирать черно белые вещи</a>
+                                    </h2>
+                                    <div class="card-article__desc">
+                                        <p>Стирать вещи черного цвета еще та морока! Не каждая хозяйка знает, как
+                                            стирать
+                                            черные вещи правильно. После стирки какой-нибудь вашей вещи этого цвета
+                                            могут
+                                            появиться белесости или же белые катышки, разводы</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <article class="card-article h-100">
+                            <div class="card-article__inner h-100">
+                                <div class="card-article__header">
+                                    <div class="card-article__image">
+                                        <img src="../img/articles/article-1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-article__main">
+                                    <time class="card-article__time" datetime="2020-04-19">19 апреля, 2020</time>
+                                    <h2 class="card-article__title">
+                                        <a href="#" class="stretched-link">Как стирать черные вещи</a>
+                                    </h2>
+                                    <div class="card-article__desc">
+                                        <p>Стирать вещи черного цвета еще та морока! Не каждая хозяйка знает, как
+                                            стирать
+                                            черные вещи правильно. После стирки какой-нибудь вашей вещи этого цвета
+                                            могут
+                                            появиться белесости или же белые катышки, разводы</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="mt-4 pt-3">
+                    <nav class="pagination justify-content-center" aria-label="Пагинация по странице components">
+                        <div class="pagination__text">Страница:</div>
+                        <ul class="pagination__list list">
+                            <li class="pagination__list-item">
+                                <a class="pagination__link" href="#">1</a>
+                            </li>
+                            <li class="pagination__list-item">
+                                <a class="pagination__link" href="#">2</a>
+                            </li>
+                            <li class="pagination__list-item pagination__list-item--active">
+                                <div class="pagination__link">3</div>
+                                <span class="sr-only">(текущая)</span>
+                            </li>
+                            <li class="pagination__list-item">
+                                <a class="pagination__link" href="#">4</a>
+                            </li>
+                            <li class="pagination__list-item pagination__list-item--disabled">
+                                <a class="pagination__link" href="javascript:" tabindex="-1">...</a>
+                            </li>
+                            <li class="pagination__list-item">
+                                <a class="pagination__link" href="#">24</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+        <section class="section-partners">
+            <div class="container">
+                <h2 class="text text--lg font-weight-bold text-center">Наши клиенты</h2>
+                <div class="row justify-content-center mb-n3">
+                    <div class="col-6 col-sm-4 col-lg mb-3">
+                        <a href="#" class="partner-logo">
+                            <img src="../img/partners-logo/partner-logo-1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg mb-3">
+                        <a href="#" class="partner-logo">
+                            <img src="../img/partners-logo/partner-logo-2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg mb-3">
+                        <a href="#" class="partner-logo">
+                            <img src="../img/partners-logo/partner-logo-3.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg mb-3">
+                        <a href="#" class="partner-logo">
+                            <img src="../img/partners-logo/partner-logo-4.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg mb-3">
+                        <a href="#" class="partner-logo">
+                            <img src="../img/partners-logo/partner-logo-5.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-reviews">
+            <div class="container">
+                <h2 class="text text--lg font-weight-bold text-center">Отзывы</h2>
+                <div class="row mb-n4">
+                    <div class="col-md-6 mb-4">
+                        <div class="video">
+                            <div class="video__box">
+                                <iframe class="video__control" width="1280" height="720"
+                                    src="https://www.youtube.com/embed/LXb3EKWsInQ" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="video">
+                            <div class="video__box">
+                                <iframe class="video__control" width="1280" height="720"
+                                    src="https://www.youtube.com/embed/LXb3EKWsInQ" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center pt-4 pt-sm-5">
+                    <a href="#" class="button button--color-pink button--theme-default px-sm-5">
+                        <span class="button__text">Смотреть все отзывы о “Прачка Сочи”</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__line">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-auto pr-lg-5 d-flex justify-content-center">
+                        <a href="#" class="footer__logo logo d-flex">
+                            <img src="../img/logo-white.svg" alt="Прачка Сочи">
+                        </a>
+                    </div>
+                    <div class="col-lg pl-xl-5">
+                        <ul class="footer__list list">
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__link">Тарифы</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__link">Все услуги</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__link">Прайс-лист</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__link">B2B</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__link">Отзывы</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-auto d-flex flex-column align-items-center">
+                        <a href="tel:+79181234567" class="footer__tel">+7 (918) 12 34 567</a>
+                        <div class="footer__social">
+                            <div class="footer__text">Рассчитать заказ:</div>
+                            <div class="social-network">
+                                <ul class="social-network__list list">
+                                    <li class="social-network__list-item">
+                                        <a href="#" class="social-network__image" target="_blank">
+                                            <img src="../img/icons/social-white-wp.svg" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="social-network__list-item">
+                                        <a href="#" class="social-network__image" target="_blank">
+                                            <img src="../img/icons/social-white-vb.svg" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-auto d-flex flex-column align-items-center">
+                        <a href="#" class="footer__button button button--color-white-mix button--theme-regular mb-2">
+                            <span class="button__text">Заказать стирку</span>
+                        </a>
+                        <a href="#" class="footer__policy">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="drawer" class="drawer js-drawer sr-only">
+        <div class="drawer__inner">
+            <div class="drawer__header d-flex align-items-center">
+                <a href="/" class="drawer__logo logo">
+                    <img src="../img/logo.svg" alt="">
+                </a>
+                <button data-drawer="drawer" class="hamburger hamburger--3dx d-flex ml-auto js-hamburger" type="button">
+                    <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+                </button>
+            </div>
+            <div class="drawer__main">
+                <a href="#" class="button shop-cart mb-4 ml-2">
+                    <span class="shop-cart__inner">
+                        <span class="shop-cart__header">
+                            <span class="shop-cart__image"></span>
+                            <span class="shop-cart__balloon" data-total-count>0</span>
+                        </span>
+                        <span class="shop-cart__main">
+                            <span class="shop-cart__text">1245 р</span>
+                        </span>
+                    </span>
+                </a>
+                <div class="drawer__nav">
+                    <ul class="drawer__nav-list list">
+                        <li class="drawer__nav-item">
+                            <a href="#" class="drawer__nav-link">Тарифы</a>
+                        </li>
+                        <li class="drawer__nav-item">
+                            <a href="#" class="drawer__nav-link">Все услуги</a>
+                        </li>
+                        <li class="drawer__nav-item">
+                            <a href="#" class="drawer__nav-link">Прайс-лист</a>
+                        </li>
+                        <li class="drawer__nav-item">
+                            <a href="#" class="drawer__nav-link">B2B</a>
+                        </li>
+                        <li class="drawer__nav-item">
+                            <a href="#" class="drawer__nav-link">Отзывы</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="drawer__footer">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                    <a href="tel:+79302333332" class="drawer__tel">+7 <span>(930)</span> 23 33 332</a>
+                    <div class="social-network">
+                        <ul class="social-network__list list">
+                            <li class="social-network__list-item">
+                                <a href="#" class="social-network__image" target="_blank">
+                                    <img src="../img/icons/social-wp.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="social-network__list-item">
+                                <a href="#" class="social-network__image" target="_blank">
+                                    <img src="../img/icons/social-vb.svg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="button" class="button button--color-pink button--theme-light button--empty w-100">
+                    <span class="button__text">Связаться</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- /.drawer -->
+    <div class="popup-fancybox popup-fancybox--theme-map" id="map-popup" style="display: none;">
+        <div class="popup-fancybox__inner">
+            <div class="map">
+                <div class="map__input pb-4">
+                    <div id="suggest-input">
+                        <div class="input-search">
+                            <label class="input-search__label">
+                                <input type="text" class="input-search__control" placeholder="Введите текст для поиска">
+                            </label>
+                            <button type="button" class="button input-search__button"></button>
+                        </div>
+                        <div class="input-validation__message"></div>
+                    </div>
+                </div>
+                <div class="map__box">
+                    <div class="map__control" id="map-main"></div>
+                    <button type="button" data-yandex-submit
+                        class="map__button button button--color-pink button--theme-default mb-2">
+                        <span class="button__text">Подтвердить</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- /#CallBack -->
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">×</span>
+            <div class="form" id="formModal">
+                <div class="form__box">
+                    <form class="js-form-validation" novalidate="novalidate">
+                        <div class="form__title form__title--gray font-weight-bold text-center">
+                            Быстрая
+                            заявка
+                        </div>
+                        <div class="input input--theme-default mb-2">
+                            <label class="input__label">
+                                <input type="text" name="name" class="input__control" placeholder="Имя" required="">
+                            </label>
+                            <div class="input-validation__message"></div>
+                        </div>
+                        <div class="input input--theme-default mb-2">
+                            <label class="input__label">
+                                <input type="tel" name="tel" class="input__control" placeholder="Телефон" required="">
+                            </label>
+                            <div class="input-validation__message"></div>
+                        </div>
+                        <div class="field-location mb-3">
+                            <label class="field-location__label">
+                                <input data-yandex-input="" type="text" name="address" class="field-location__input"
+                                    placeholder="Адрес доставки">
+                            </label>
+                            <a href="#map-popup" data-fancybox-map="" class="field-location__button button">
+                                <span class="field-location__text">Найти меня</span>
+                            </a>
+                        </div>
+                        <div class="checkbox mb-3 pb-1">
+                            <label class="checkbox__label">
+                                <input type="checkbox" name="agreement" class="checkbox__control">
+                                <span class="checkbox__text">
+                                    Даю согласие на обработку персональных данных и подтверждаю свое
+                                    ознакомление с <a href="#">политикой обработки персональных
+                                        данных</a> компании
+                                </span>
+                            </label>
+                            <div class="input-validation__message"></div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="button button--color-pink button--theme-default"
+                                id="submetSucces">
+                                <span class="button__text">Отправить</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /#map-popup -->
+            <div class="popup-fancybox popup-fancybox--theme-successful" id="successful-send" style="display: none;">
+                <div class="popup-fancybox__inner">
+                    <div class="icon icon--successful d-flex mx-auto mb-3">
+                        <svg width="70" height="70" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"
+                            fill="currentColor">
+                            <path
+                                d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M26,50C12.767,50,2,39.233,2,26 S12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z" />
+                            <path
+                                d="M38.252,15.336l-15.369,17.29l-9.259-7.407c-0.43-0.345-1.061-0.274-1.405,0.156c-0.345,0.432-0.275,1.061,0.156,1.406 l10,8C22.559,34.928,22.78,35,23,35c0.276,0,0.551-0.114,0.748-0.336l16-18c0.367-0.412,0.33-1.045-0.083-1.411 C39.251,14.885,38.62,14.922,38.252,15.336z" />
+                        </svg>
+                    </div>
+                    <div class="text-center">
+                        Спасибо!
+                        <br>Ваша заявка отправлена.
+                        <br>В ближайшее время мы с Вами свяжемся!
+                    </div>
+                </div>
+            </div>
+            <!-- /#successful-send -->
+        </div>
+
+    </div>
+
+    <!-- Scrool icon -->
+    <a href="#" class="to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- scrool top -->
+    <!-- <script>
+        const toTop = document.querySelector(".to-top");
+
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                toTop.classList.add("active");
+            } else {
+                toTop.classList.remove("active");
+            }
+        })
+    </script> -->
+
+    <!-- <script>
+
+        let modal = document.getElementById('myModal');
+        let btn = document.getElementById("myBtn");
+        let span = document.getElementsByClassName("close")[0];
+        let succesSend = document.getElementById('successful-send');
+        let sendSuccess = document.getElementById('submetSucces');
+        let formModal = document.getElementById('formModal');
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target === sendSuccess) {
+                modal.style.display = "none";
+                succesSend.style.display = "block";
+            }
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script> -->
+</body>
+
+</html>

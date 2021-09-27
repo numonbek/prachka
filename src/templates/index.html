@@ -1,0 +1,1462 @@
+<!doctype html>
+<html lang="ru" class="h-100">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TITLE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png?v=9B0AxQobae">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png?v=9B0AxQobae">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png?v=9B0AxQobae">
+    <link rel="manifest" href="../favicon/site.webmanifest?v=9B0AxQobae">
+    <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg?v=9B0AxQobae" color="#303ff0">
+    <link rel="shortcut icon" href="../favicon/favicon.ico?v=9B0AxQobae">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="../favicon/browserconfig.xml?v=9B0AxQobae">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=aad1d6d9-9640-4750-90e9-5fc4f43c303a"
+        type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
+
+</head>
+
+<body class="page">
+    <header class="header">
+        <div class="header__line header__line--top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col col-md-auto">
+                        <a href="/" class="header__logo logo d-flex">
+                            <img src="../img/logo.svg" alt="Прачка Сочи">
+                        </a>
+                    </div>
+                    <div class="col d-none d-md-flex justify-content-center">
+                        <a href="tel:+79302333332" class="header__tel">+7 <span>(930)</span> 23 33 332</a>
+                    </div>
+                    <div class="col d-none d-lg-flex justify-content-center align-items-center">
+                        <div class="header__text">Рассчитать заказ:</div>
+                        <div class="social-network">
+                            <ul class="social-network__list list">
+                                <li class="social-network__list-item">
+                                    <a href="#" class="social-network__image" target="_blank">
+                                        <img src="../img/icons/social-wp.svg" alt="">
+                                    </a>
+                                </li>
+                                <li class="social-network__list-item">
+                                    <a href="#" class="social-network__image" target="_blank">
+                                        <img src="../img/icons/social-vb.svg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <a href="/" class="button shop-cart">
+                            <span class="shop-cart__inner">
+                                <span class="shop-cart__header">
+                                    <span class="shop-cart__image"></span>
+                                    <span class="shop-cart__balloon" data-total-count>0</span>
+                                </span>
+                                <span class="shop-cart__main">
+                                    <span class="shop-cart__text"><span data-total-price>0</span> р</span>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col col-lg-auto d-none d-md-block">
+                        <a id="myBtn" href="#" class="header__button button button--color-pink button--theme-default">
+                            <span class="button__text">Оставить заявку</span>
+                        </a>
+                    </div>
+                    <div class="col-auto d-lg-none">
+                        <button data-drawer="drawer" class="hamburger hamburger--3dx d-flex js-hamburger" type="button">
+                            <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__line header__line--bottom d-none d-lg-block">
+            <div class="container">
+                <nav class="nav">
+                    <ul class="nav__list list">
+                        <li class="nav__list-item">
+                            <a href="#" class="nav__link">Тарифы</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="" class="nav__link">Все услуги</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="./pray-list.html" class="nav__link">Прайс-лист</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="./b2b.html" class="nav__link">B2B</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="./feedback.html" class="nav__link">Отзывы</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="section-intro" style="background-image: url(../img/bg-intro.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-lg-7 col-xl-6">
+                        <h1 class="text text--gray text--lg font-weight-bold mb-3">Стирка с бесплатной доставкой</h1>
+                        <p class="section-intro__text">Сохраните Ваше время для близких, а стирку доверьте нам!</p>
+                        <div class="sticker mb-2">
+                            <div class="sticker__inner">
+                                <div class="sticker__header">
+                                    <div class="sticker__image">
+                                        <img src="../img/icons/sticker-1.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="sticker__main">
+                                    <div class="sticker__text">Стирка + глажка за 48 часов</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sticker mb-5">
+                            <div class="sticker__inner">
+                                <div class="sticker__header">
+                                    <div class="sticker__image">
+                                        <img src="../img/icons/sticker-1.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="sticker__main">
+                                    <div class="sticker__text">Удобное время доставки и забора</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-10 col-xl-9">
+                                <div class="form">
+                                    <div class="form__box">
+                                        <form class="js-form-validation">
+                                            <div class="form__title form__title--gray font-weight-bold text-center">
+                                                Быстрая
+                                                заявка
+                                            </div>
+                                            <div class="input input--theme-default mb-2">
+                                                <label class="input__label">
+                                                    <input type="text" name="name" class="input__control"
+                                                        placeholder="Имя" required>
+                                                </label>
+                                                <div class="input-validation__message"></div>
+                                            </div>
+                                            <div class="input input--theme-default mb-2">
+                                                <label class="input__label">
+                                                    <input type="tel" name="tel" class="input__control"
+                                                        placeholder="Телефон" required>
+                                                </label>
+                                                <div class="input-validation__message"></div>
+                                            </div>
+                                            <div class="field-location mb-3">
+                                                <label class="field-location__label">
+                                                    <input data-yandex-input type="text" name="address"
+                                                        class="field-location__input" placeholder="Адрес доставки">
+                                                </label>
+                                                <a href="#map-popup" data-fancybox-map
+                                                    class="field-location__button button">
+                                                    <span class="field-location__text">Найти меня</span>
+                                                </a>
+                                            </div>
+                                            <div class="checkbox mb-3 pb-1">
+                                                <label class="checkbox__label">
+                                                    <input type="checkbox" name="agreement" class="checkbox__control">
+                                                    <span class="checkbox__text">
+                                                        Даю согласие на обработку персональных данных и подтверждаю свое
+                                                        ознакомление с <a href="#">политикой обработки персональных
+                                                            данных</a> компании
+                                                    </span>
+                                                </label>
+                                                <div class="input-validation__message"></div>
+                                            </div>
+                                            <div class="d-flex justify-content-center">
+                                                <button type="submit"
+                                                    class="button button--color-pink button--theme-default">
+                                                    <span class="button__text">Отправить</span>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-work">
+            <div class="container">
+                <h2 class="section-work__title text text--lg font-weight-bold text-center">Как мы работаем?</h2>
+                <ul class="section-work__list list">
+                    <li class="section-work__list-item">
+                        <div class="card-timeline">
+                            <div class="card-timeline__inner">
+                                <div class="card-timeline__header">
+                                    <div class="card-timeline__image-container">
+                                        <div class="card-timeline__image">
+                                            <img src="../img/timeline/timeline-step-1.jpg" alt="">
+                                        </div>
+                                        <div class="card-timeline__step"></div>
+                                    </div>
+                                </div>
+                                <div class="card-timeline__main">
+                                    <h3 class="card-timeline__title">Вы делаете заказ</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="section-work__list-item">
+                        <div class="card-timeline">
+                            <div class="card-timeline__inner">
+                                <div class="card-timeline__header">
+                                    <div class="card-timeline__image-container">
+                                        <div class="card-timeline__image">
+                                            <img src="../img/timeline/timeline-step-2.jpg" alt="">
+                                        </div>
+                                        <div class="card-timeline__step"></div>
+                                    </div>
+                                </div>
+                                <div class="card-timeline__main">
+                                    <h3 class="card-timeline__title">Мы забираем вещи</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="section-work__list-item">
+                        <div class="card-timeline">
+                            <div class="card-timeline__inner">
+                                <div class="card-timeline__header">
+                                    <div class="card-timeline__image-container">
+                                        <div class="card-timeline__image">
+                                            <img src="../img/timeline/timeline-step-3.jpg" alt="">
+                                        </div>
+                                        <div class="card-timeline__step"></div>
+                                    </div>
+                                </div>
+                                <div class="card-timeline__main">
+                                    <h3 class="card-timeline__title">Чистим и стираем</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="section-work__list-item">
+                        <div class="card-timeline">
+                            <div class="card-timeline__inner">
+                                <div class="card-timeline__header">
+                                    <div class="card-timeline__image-container">
+                                        <div class="card-timeline__image">
+                                            <img src="../img/timeline/timeline-step-4.jpg" alt="">
+                                        </div>
+                                        <div class="card-timeline__step"></div>
+                                    </div>
+                                </div>
+                                <div class="card-timeline__main">
+                                    <h3 class="card-timeline__title">Привозим вам заказ</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="section-offers">
+            <div class="container">
+                <h2 class="text text--lg font-weight-bold text-center">Спец предложения</h2>
+                <div class="row justify-content-around mb-n5">
+                    <div class="col-md-4 col-xl-3 mb-5">
+                        <div class="card-offer">
+                            <div class="card-offer__inner">
+                                <div class="card-offer__header">
+                                    <div class="card-offer__image">
+                                        <img src="../img/benefits/benefit-item-1.jpg" alt="">
+                                    </div>
+                                    <h3 class="card-offer__title">Пакет для ресторанов</h3>
+                                </div>
+                                <div class="card-offer__main">
+                                    <div class="card-offer__content">
+                                        <ul class="card-offer__list list">
+                                            <li class="card-offer__list-item">
+                                                <div class="card-offer__item">
+                                                    <div class="card-offer__item-key">8</div>
+                                                    <div class="card-offer__item-value">Единиц верхней одежды</div>
+                                                </div>
+                                            </li>
+                                            <li class="card-offer__list-item">
+                                                <div class="card-offer__item">
+                                                    <div class="card-offer__item-key">2</div>
+                                                    <div class="card-offer__item-value">Дня гарантированный срок стирки
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="card-offer__total-price">4200₽</div>
+                                    </div>
+                                    <div class="card-offer__benefit">Ваша выгода составит 2100₽</div>
+                                </div>
+                                <div class="card-offer__footer">
+                                    <button type="button" class="button button--color-white button--theme-normal">
+                                        <span class="button__text">Подробнее</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xl-3 mb-5">
+                        <div class="card-offer">
+                            <div class="card-offer__inner">
+                                <div class="card-offer__header">
+                                    <div class="card-offer__image">
+                                        <img src="../img/benefits/benefit-item-2.jpg" alt="">
+                                    </div>
+                                    <h3 class="card-offer__title">Пакет для гостинниц</h3>
+                                </div>
+                                <div class="card-offer__main">
+                                    <div class="card-offer__content">
+                                        <ul class="card-offer__list list">
+                                            <li class="card-offer__list-item">
+                                                <div class="card-offer__item">
+                                                    <div class="card-offer__item-key">23</div>
+                                                    <div class="card-offer__item-value">Единиц верхней одежды</div>
+                                                </div>
+                                            </li>
+                                            <li class="card-offer__list-item">
+                                                <div class="card-offer__item">
+                                                    <div class="card-offer__item-key">5</div>
+                                                    <div class="card-offer__item-value">Дня гарантированный срок стирки
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="card-offer__total-price">5400₽</div>
+                                    </div>
+                                    <div class="card-offer__benefit">Ваша выгода составит 2100₽</div>
+                                </div>
+                                <div class="card-offer__footer">
+                                    <button type="button" class="button button--color-white button--theme-normal">
+                                        <span class="button__text">Подробнее</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xl-3 mb-5">
+                        <div class="card-offer">
+                            <div class="card-offer__inner">
+                                <div class="card-offer__header">
+                                    <div class="card-offer__image">
+                                        <img src="../img/benefits/benefit-item-3.jpg" alt="">
+                                    </div>
+                                    <h3 class="card-offer__title">Пакет для домохозяек</h3>
+                                </div>
+                                <div class="card-offer__main">
+                                    <div class="card-offer__content">
+                                        <ul class="card-offer__list list">
+                                            <li class="card-offer__list-item">
+                                                <div class="card-offer__item">
+                                                    <div class="card-offer__item-key">9</div>
+                                                    <div class="card-offer__item-value">Единиц верхней одежды</div>
+                                                </div>
+                                            </li>
+                                            <li class="card-offer__list-item">
+                                                <div class="card-offer__item">
+                                                    <div class="card-offer__item-key">2</div>
+                                                    <div class="card-offer__item-value">Дня гарантированный срок стирки
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="card-offer__total-price">2500₽</div>
+                                    </div>
+                                    <div class="card-offer__benefit">Ваша выгода составит 2100₽</div>
+                                </div>
+                                <div class="card-offer__footer">
+                                    <button type="button" class="button button--color-white button--theme-normal">
+                                        <span class="button__text">Подробнее</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-catalog">
+            <div class="container">
+                <h2 class="text text--lg font-weight-bold text-center">Каталог услуг</h2>
+                <div class="row mb-n4">
+                    <div class="col-md-6 col-lg-4 mb-4 pb-lg-3">
+                        <div class="card-catalog h-100">
+                            <div class="card-catalog__inner h-100"
+                                style="background-image: url(../img/catalog/catalog-item-1.jpg);">
+                                <div class="card-catalog__content">
+                                    <h3 class="card-catalog__title">
+                                        <a href="#" class="stretched-link">Верхняя одежда</a>
+                                    </h3>
+                                    <ul class="card-catalog__list list">
+                                        <li class="card-catalog__list-item">
+                                            <a href="#" class="card-catalog__link">Пуховики</a>
+                                        </li>
+                                        <li class="card-catalog__list-item">
+                                            <a href="#" class="card-catalog__link">Пальто</a>
+                                        </li>
+                                        <li class="card-catalog__list-item">
+                                            <a href="#" class="card-catalog__link">Куртки</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 pb-lg-3">
+                        <div class="card-catalog h-100">
+                            <div class="card-catalog__inner h-100"
+                                style="background-image: url(../img/catalog/catalog-item-2.jpg);">
+                                <div class="card-catalog__content">
+                                    <h3 class="card-catalog__title">
+                                        <a href="#" class="stretched-link">Домашний текстиль</a>
+                                    </h3>
+                                    <ul class="card-catalog__list list">
+                                        <li class="card-catalog__list-item">
+                                            <a href="#" class="card-catalog__link">Одеяла</a>
+                                        </li>
+                                        <li class="card-catalog__list-item">
+                                            <a href="#" class="card-catalog__link">Пледы</a>
+                                        </li>
+                                        <li class="card-catalog__list-item">
+                                            <a href="#" class="card-catalog__link">Шторы</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 pb-lg-3">
+                        <div class="card-catalog h-100">
+                            <div class="card-catalog__inner h-100"
+                                style="background-image: url(../img/catalog/catalog-item-3.jpg);">
+                                <div class="card-catalog__content">
+                                    <h3 class="card-catalog__title">
+                                        <a href="#" class="stretched-link">Повседневная одежда</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 pb-lg-3">
+                        <div class="card-catalog h-100">
+                            <div class="card-catalog__inner h-100"
+                                style="background-image: url(../img/catalog/catalog-item-4.jpg);">
+                                <div class="card-catalog__content">
+                                    <h3 class="card-catalog__title">
+                                        <a href="#" class="stretched-link">Деликатные вещи</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 pb-lg-3">
+                        <div class="card-catalog h-100">
+                            <div class="card-catalog__inner h-100"
+                                style="background-image: url(../img/catalog/catalog-item-5.jpg);">
+                                <div class="card-catalog__content">
+                                    <h3 class="card-catalog__title">
+                                        <a href="#" class="stretched-link">Спортивная одежда</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 pb-lg-3">
+                        <div class="card-catalog h-100">
+                            <div class="card-catalog__inner h-100"
+                                style="background-image: url(../img/catalog/catalog-item-6.jpg);">
+                                <div class="card-catalog__content">
+                                    <h3 class="card-catalog__title">
+                                        <a href="#" class="stretched-link">Офисная одежда</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-form">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <h2 class="text text--lg font-weight-bold text-center mb-4">Заказать химчистку легко</h2>
+                        <form action="#" class="section-form__form js-form-validation">
+                            <div class="row mx-n2">
+                                <div class="col-lg px-2 mb-3 mb-lg-0">
+                                    <div class="input input--theme-accent">
+                                        <label class="input__label">
+                                            <input type="text" name="name" class="input__control" placeholder="Ваше имя"
+                                                required>
+                                        </label>
+                                        <div class="input-validation__message"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg px-2 mb-3 mb-lg-0">
+                                    <div class="input input--theme-accent">
+                                        <label class="input__label">
+                                            <input type="tel" name="tel" class="input__control"
+                                                placeholder="+7 (___) ___-__-__" required>
+                                        </label>
+                                        <div class="input-validation__message"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-auto px-2 d-none d-lg-block">
+                                    <button type="submit"
+                                        class="section-form__button button button--color-pink button--theme-bold button--full-w">
+                                        <span class="button__text">Позвонить <span class=" d-lg-inline">мне
+                                                сейчас</span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="checkbox mt-lg-3 mb-4 mb-lg-0">
+                                <label class="checkbox__label">
+                                    <input type="checkbox" name="agreement" class="checkbox__control">
+                                    <span class="checkbox__text">
+                                        Даю согласие на обработку персональных данных и подтверждаю свое ознакомление с
+                                        <a href="#">политикой обработки персональных данных</a> компании
+                                    </span>
+                                </label>
+                                <div class="input-validation__message"></div>
+                            </div>
+                            <button type="submit"
+                                class="section-form__button button button--color-pink button--theme-bold button--full-w d-lg-none">
+                                <span class="button__text">Позвонить <span class=" d-lg-inline">мне сейчас</span></span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-services">
+            <div class="container">
+                <h2 class="text text--lg font-weight-bold text-center">Популярные услуги</h2>
+                <div class="row mb-n4">
+                    <div class="col-md-6 col-lg-4 mb-4 pb-lg-3">
+                        <div class="card-service h-100">
+                            <div class="card-service__inner h-100">
+                                <div class="card-service__head">
+                                    <img src="../img/services/service-item-2.png" alt="" class="card-service__image">
+                                </div>
+                                <div class="card-service__main">
+                                    <h3 class="card-service__title">
+                                        <a href="#" class="stretched-link">Рубашка/сорочка</a>
+                                    </h3>
+                                    <ul class="card-service__list list">
+                                        <li class="card-service__list-item">
+                                            <div class="card-service__item">
+                                                <span class="card-service__item-key">Стирка и глажка</span>
+                                                <span class="card-service__item-value">190р</span>
+                                            </div>
+                                        </li>
+                                        <li class="card-service__list-item">
+                                            <div class="card-service__item">
+                                                <span class="card-service__item-key">Аквачистка</span>
+                                                <span class="card-service__item-value">290р</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 pb-lg-3">
+                        <div class="card-service h-100">
+                            <div class="card-service__inner h-100">
+                                <div class="card-service__head">
+                                    <img src="../img/services/service-item-4.png" alt="" class="card-service__image">
+                                </div>
+                                <div class="card-service__main">
+                                    <h3 class="card-service__title">
+                                        <a href="#" class="stretched-link">Химчистка пальто</a>
+                                    </h3>
+                                    <ul class="card-service__list list">
+                                        <li class="card-service__list-item">
+                                            <div class="card-service__item">
+                                                <span class="card-service__item-key">Демисезонное</span>
+                                                <span class="card-service__item-value">190р</span>
+                                            </div>
+                                        </li>
+                                        <li class="card-service__list-item">
+                                            <div class="card-service__item">
+                                                <span class="card-service__item-key">Зимнее на пуху</span>
+                                                <span class="card-service__item-value">290р</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 pb-lg-3">
+                        <div class="card-service h-100">
+                            <div class="card-service__inner h-100">
+                                <div class="card-service__head">
+                                    <img src="../img/services/service-item-6.png" alt="" class="card-service__image">
+                                </div>
+                                <div class="card-service__main">
+                                    <h3 class="card-service__title">
+                                        <a href="#" class="stretched-link">Деловой костюм</a>
+                                    </h3>
+                                    <ul class="card-service__list list">
+                                        <li class="card-service__list-item">
+                                            <div class="card-service__item">
+                                                <span class="card-service__item-key">Пиджак</span>
+                                                <span class="card-service__item-value">190р</span>
+                                            </div>
+                                        </li>
+                                        <li class="card-service__list-item">
+                                            <div class="card-service__item">
+                                                <span class="card-service__item-key">Брюки</span>
+                                                <span class="card-service__item-value">290р</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 pb-lg-3">
+                        <div class="card-service h-100">
+                            <div class="card-service__inner h-100">
+                                <div class="card-service__head">
+                                    <img src="../img/services/service-item-3.png" alt="" class="card-service__image">
+                                </div>
+                                <div class="card-service__main">
+                                    <h3 class="card-service__title">
+                                        <a href="#" class="stretched-link">Химчистка куртки</a>
+                                    </h3>
+                                    <ul class="card-service__list list">
+                                        <li class="card-service__list-item">
+                                            <div class="card-service__item">
+                                                <span class="card-service__item-key">Пуховик</span>
+                                                <span class="card-service__item-value">190р</span>
+                                            </div>
+                                        </li>
+                                        <li class="card-service__list-item">
+                                            <div class="card-service__item">
+                                                <span class="card-service__item-key">На натур. меху</span>
+                                                <span class="card-service__item-value">290р</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 pb-lg-3">
+                        <div class="card-service h-100">
+                            <div class="card-service__inner h-100">
+                                <div class="card-service__head">
+                                    <img src="../img/services/service-item-5.png" alt="" class="card-service__image">
+                                </div>
+                                <div class="card-service__main">
+                                    <h3 class="card-service__title">
+                                        <a href="#" class="stretched-link">Химчистка платья</a>
+                                    </h3>
+                                    <ul class="card-service__list list">
+                                        <li class="card-service__list-item">
+                                            <div class="card-service__item">
+                                                <span class="card-service__item-key">Простой покрой</span>
+                                                <span class="card-service__item-value">190р</span>
+                                            </div>
+                                        </li>
+                                        <li class="card-service__list-item">
+                                            <div class="card-service__item">
+                                                <span class="card-service__item-key">Свадебное платье</span>
+                                                <span class="card-service__item-value">290р</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 pb-lg-3">
+                        <div class="card-service h-100">
+                            <div class="card-service__inner h-100">
+                                <div class="card-service__head">
+                                    <img src="../img/services/service-item-1.png" alt="" class="card-service__image">
+                                </div>
+                                <div class="card-service__main">
+                                    <h3 class="card-service__title">
+                                        <a href="#" class="stretched-link">Кожа и мех</a>
+                                    </h3>
+                                    <ul class="card-service__list list">
+                                        <li class="card-service__list-item">
+                                            <div class="card-service__item">
+                                                <span class="card-service__item-key">Дубленка</span>
+                                                <span class="card-service__item-value">190р</span>
+                                            </div>
+                                        </li>
+                                        <li class="card-service__list-item">
+                                            <div class="card-service__item">
+                                                <span class="card-service__item-key">Шуба</span>
+                                                <span class="card-service__item-value">290р</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center pt-4 mt-3">
+                    <div class="col-lg-8 d-flex flex-column align-items-center text-center">
+                        <a href="#" class="button button--color-pink button--theme-default px-sm-5 mb-3">
+                            <span class="button__text">Смотреть все цены на услуги прачечной</span>
+                        </a>
+                        <p class="section-services__text">* - Бесплатно выезд и доставка при заказе от 2000 руб. Если же
+                            Ваш
+                            заказа менее 2000 руб - стоимость выездного обслуживания можно узнать в разделе "ДОСТАВКА".
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-map">
+            <div class="container">
+                <h2 class="text text--lg font-weight-bold text-center">Зона обслуживания</h2>
+                <div class="row">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="map">
+                            <div class="map__box">
+                                <iframe class="map__control"
+                                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A94db85c5658cac1650ffcf3b2efdd8a06e0de6c068420d5d3e36bec7e2958b6c&amp;source=constructor"
+                                    width="100%" height="400" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="section-map__content mb-4 mb-xl-5">
+                            <p>Мы доставляем точно в срок!</p>
+                            <p>Как это сделать в таком большом и загруженном городе как Сочи?</p>
+                            <p>Выделить зону обслуживания!</p>
+                            <p>Зона обслуживания нашей химчистки показана на карте, но если ваш адрес не входит в зону
+                                нашего обслуживания, то мы готовы предложить вам эксклюзивные условия и повысить
+                                приоритет
+                                вашего района при расширении зоны обслуживания.</p>
+                        </div>
+                        <div class="row flex-wrap">
+                            <div class="col-auto mb-2">
+                                <button type="button"
+                                    class="button button--color-blue button--theme-default button--empty">
+                                    <span class="button__text">Проверить адрес</span>
+                                </button>
+                            </div>
+                            <div class="col-auto col-sm">
+                                <button type="button"
+                                    class="button button--color-pink button--theme-default px-4 px-xl-5">
+                                    <span class="button__text">Я вне зоны обслуживания</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-features">
+            <div class="container">
+                <h2 class="text text--lg font-weight-bold text-center">5 причин заказать у нас стирку</h2>
+                <ul class="section-features__list list row justify-content-center mb-n4">
+                    <li class="section-features__list-item col-md-6 col-lg-4 mb-4 pb-lg-2">
+                        <div class="card-info h-100">
+                            <div class="card-info__inner h-100">
+                                <div class="card-info__header">
+                                    <div class="card-info__image">
+                                        <img src="../img/info/info-item-1.jpg" alt="">
+                                    </div>
+                                    <div class="card-info__step"></div>
+                                </div>
+                                <div class="card-info__main">
+                                    <h3 class="card-info__title">Экономия времени</h3>
+                                    <div class="card-info__desc">
+                                        <p>Экономьте до 24 часов в месяц, стирая у нас.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="section-features__list-item col-md-6 col-lg-4 mb-4 pb-lg-2">
+                        <div class="card-info h-100">
+                            <div class="card-info__inner h-100">
+                                <div class="card-info__header">
+                                    <div class="card-info__image">
+                                        <img src="../img/info/info-item-2.jpg" alt="">
+                                    </div>
+                                    <div class="card-info__step"></div>
+                                </div>
+                                <div class="card-info__main">
+                                    <h3 class="card-info__title">Индивидуальная</h3>
+                                    <div class="card-info__desc">
+                                        <p>Мы стираем вещи каждого клиента индивидуально, даже если нам нужно
+                                            использовать
+                                            для
+                                            этого десять стиральных машин</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="section-features__list-item col-md-6 col-lg-4 mb-4 pb-lg-2">
+                        <div class="card-info h-100">
+                            <div class="card-info__inner h-100">
+                                <div class="card-info__header">
+                                    <div class="card-info__image">
+                                        <img src="../img/info/info-item-3.jpg" alt="">
+                                    </div>
+                                    <div class="card-info__step"></div>
+                                </div>
+                                <div class="card-info__main">
+                                    <h3 class="card-info__title">Бесплатная доставка</h3>
+                                    <div class="card-info__desc">
+                                        <p>Вам не нужно беспокоиться о стоимости доставки— она включена в стоимость</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="section-features__list-item col-md-6 col-lg-4 mb-4 pb-lg-2">
+                        <div class="card-info h-100">
+                            <div class="card-info__inner h-100">
+                                <div class="card-info__header">
+                                    <div class="card-info__image">
+                                        <img src="../img/info/info-item-4.jpg" alt="">
+                                    </div>
+                                    <div class="card-info__step"></div>
+                                </div>
+                                <div class="card-info__main">
+                                    <h3 class="card-info__title">Тщательная глажка</h3>
+                                    <div class="card-info__desc">
+                                        <p>Тщательная глажка изделий на манекене. Без складок и заломов</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="section-features__list-item col-md-6 col-lg-4 mb-4 pb-lg-2">
+                        <div class="card-info h-100">
+                            <div class="card-info__inner h-100">
+                                <div class="card-info__header">
+                                    <div class="card-info__image">
+                                        <img src="../img/info/info-item-5.jpg" alt="">
+                                    </div>
+                                    <div class="card-info__step"></div>
+                                </div>
+                                <div class="card-info__main">
+                                    <h3 class="card-info__title">Страхование ваших вещей</h3>
+                                    <div class="card-info__desc">
+                                        <p>Вам не нужно беспокоиться за сохранность вещей</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="section-team pt-4">
+            <div class="container">
+                <h2 class="text text--lg font-weight-bold text-center">Наша команда</h2>
+                <div class="row mb-n4">
+                    <div class="col-sm-6 col-lg-3 mb-4">
+                        <div class="card-person h-100">
+                            <div class="card-person__inner h-100">
+                                <div class="card-person__header">
+                                    <div class="card-person__image">
+                                        <img src="../img/personal/person-1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-person__main">
+                                    <h3 class="card-person__title">Сергей</h3>
+                                    <div class="card-person__position">Руководитель</div>
+                                </div>
+                                <div class="card-person__footer">
+                                    <button type="button"
+                                        class="button button--color-pink button--theme-light button--empty">
+                                        <span class="button__text">Связаться</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 mb-4">
+                        <div class="card-person h-100">
+                            <div class="card-person__inner h-100">
+                                <div class="card-person__header">
+                                    <div class="card-person__image">
+                                        <img src="../img/personal/person-2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-person__main">
+                                    <h3 class="card-person__title">Евгений</h3>
+                                    <div class="card-person__position">Управляющий прачечной</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 mb-4">
+                        <div class="card-person h-100">
+                            <div class="card-person__inner h-100">
+                                <div class="card-person__header">
+                                    <div class="card-person__image">
+                                        <img src="../img/personal/person-3.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-person__main">
+                                    <h3 class="card-person__title">Анастасия</h3>
+                                    <div class="card-person__position">Технолог</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 mb-4">
+                        <div class="card-person h-100">
+                            <div class="card-person__inner h-100">
+                                <div class="card-person__header">
+                                    <div class="card-person__image">
+                                        <img src="../img/personal/person-4.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-person__main">
+                                    <h3 class="card-person__title">Олеся</h3>
+                                    <div class="card-person__position">Помощник технолога</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-swiper js-swiper-main">
+            <div class="swiper-custom">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="section-swiper__image">
+                                <img src="../img/swiper-image.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="section-swiper__image">
+                                <img src="../img/swiper-image.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="section-swiper__image">
+                                <img src="../img/swiper-image.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="section-swiper__image">
+                                <img src="../img/swiper-image.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="section-swiper__image">
+                                <img src="../img/swiper-image.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="section-swiper__image">
+                                <img src="../img/swiper-image.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="swiper-container-horizontal">
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <section class="section-faq">
+            <div class="container">
+                <h2 class="text text--lg font-weight-bold text-center">Часто задаваемые вопросы</h2>
+                <div class="px-lg-5">
+                    <div class="tabbed px-xl-3">
+                        <ul class="nav tabbed__list list" role="tablist">
+                            <li class="tabbed__list-item">
+                                <a class="tabbed__link active" id="tab-link-washing" data-toggle="tab"
+                                    href="#tab-panel-washing" role="tab" aria-controls="tab-panel-washing"
+                                    aria-selected="true">Стирка</a>
+                            </li>
+                            <li class="tabbed__list-item">
+                                <a class="tabbed__link" id="tab-link-delivery" data-toggle="tab"
+                                    href="#tab-panel-delivery" role="tab" aria-controls="tab-panel-delivery"
+                                    aria-selected="false">Прием и доставка</a>
+                            </li>
+                            <li class="tabbed__list-item">
+                                <a class="tabbed__link" id="tab-link-payment" data-toggle="tab"
+                                    href="#tab-panel-payment" role="tab" aria-controls="tab-panel-payment"
+                                    aria-selected="false">Тарифы и оплата</a>
+                            </li>
+                        </ul>
+                        <div class="tabbed__content">
+                            <div class="tabbed__panel fade show active" id="tab-panel-washing" role="tabpanel"
+                                aria-labelledby="tab-link-washing">
+                                <div class="accordion mb-3">
+                                    <a class="accordion__button" href="#accordion-faq-1" aria-controls="accordion-faq-1"
+                                        data-toggle="collapse" role="button" aria-expanded="false">
+                                        Как перенести или отменить заказ?
+                                    </a>
+                                    <div class="collapse" id="accordion-faq-1">
+                                        <div class="accordion__panel">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias commodi
+                                            consequuntur dolor expedita facere laborum nam, officiis provident quos,
+                                            ratione
+                                            rem sed sunt ullam. Blanditiis, dolor velit? Et libero, optio.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion mb-3">
+                                    <a class="accordion__button" href="#accordion-faq-2" aria-controls="accordion-faq-2"
+                                        data-toggle="collapse" role="button" aria-expanded="false">
+                                        Что делать если выездной специалист не приехал в назначенное время?
+                                    </a>
+                                    <div class="collapse" id="accordion-faq-2">
+                                        <div class="accordion__panel">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias commodi
+                                            consequuntur dolor expedita facere laborum nam, officiis provident quos,
+                                            ratione
+                                            rem sed sunt ullam. Blanditiis, dolor velit? Et libero, optio.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion mb-3">
+                                    <a class="accordion__button" href="#accordion-faq-3" aria-controls="accordion-faq-1"
+                                        data-toggle="collapse" role="button" aria-expanded="false">
+                                        Выездной специалист привез вещи, но меня не удовлетворяет качество стирки. Что
+                                        делать?
+                                    </a>
+                                    <div class="collapse" id="accordion-faq-3">
+                                        <div class="accordion__panel">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias commodi
+                                            consequuntur dolor expedita facere laborum nam, officiis provident quos,
+                                            ratione
+                                            rem sed sunt ullam. Blanditiis, dolor velit? Et libero, optio.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabbed__panel fade" id="tab-panel-delivery" role="tabpanel"
+                                aria-labelledby="tab-link-delivery">
+                                <div class="accordion mb-3">
+                                    <a class="accordion__button" href="#accordion-faq-4" aria-controls="accordion-faq-4"
+                                        data-toggle="collapse" role="button" aria-expanded="false">
+                                        Как перенести или отменить заказ?
+                                    </a>
+                                    <div class="collapse" id="accordion-faq-4">
+                                        <div class="accordion__panel">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias commodi
+                                            consequuntur dolor expedita facere laborum nam, officiis provident quos,
+                                            ratione
+                                            rem sed sunt ullam. Blanditiis, dolor velit? Et libero, optio.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion mb-3">
+                                    <a class="accordion__button" href="#accordion-faq-5" aria-controls="accordion-faq-5"
+                                        data-toggle="collapse" role="button" aria-expanded="false">
+                                        Что делать если выездной специалист не приехал в назначенное время?
+                                    </a>
+                                    <div class="collapse" id="accordion-faq-5">
+                                        <div class="accordion__panel">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias commodi
+                                            consequuntur dolor expedita facere laborum nam, officiis provident quos,
+                                            ratione
+                                            rem sed sunt ullam. Blanditiis, dolor velit? Et libero, optio.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion mb-3">
+                                    <a class="accordion__button" href="#accordion-faq-6" aria-controls="accordion-faq-6"
+                                        data-toggle="collapse" role="button" aria-expanded="false">
+                                        Выездной специалист привез вещи, но меня не удовлетворяет качество стирки. Что
+                                        делать?
+                                    </a>
+                                    <div class="collapse" id="accordion-faq-6">
+                                        <div class="accordion__panel">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias commodi
+                                            consequuntur dolor expedita facere laborum nam, officiis provident quos,
+                                            ratione
+                                            rem sed sunt ullam. Blanditiis, dolor velit? Et libero, optio.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabbed__panel fade" id="tab-panel-payment" role="tabpanel"
+                                aria-labelledby="tab-link-payment">
+                                <div class="accordion mb-3">
+                                    <a class="accordion__button" href="#accordion-faq-7" aria-controls="accordion-faq-7"
+                                        data-toggle="collapse" role="button" aria-expanded="false">
+                                        Как перенести или отменить заказ?
+                                    </a>
+                                    <div class="collapse" id="accordion-faq-7">
+                                        <div class="accordion__panel">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias commodi
+                                            consequuntur dolor expedita facere laborum nam, officiis provident quos,
+                                            ratione
+                                            rem sed sunt ullam. Blanditiis, dolor velit? Et libero, optio.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion mb-3">
+                                    <a class="accordion__button" href="#accordion-faq-8" aria-controls="accordion-faq-8"
+                                        data-toggle="collapse" role="button" aria-expanded="false">
+                                        Что делать если выездной специалист не приехал в назначенное время?
+                                    </a>
+                                    <div class="collapse" id="accordion-faq-8">
+                                        <div class="accordion__panel">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias commodi
+                                            consequuntur dolor expedita facere laborum nam, officiis provident quos,
+                                            ratione
+                                            rem sed sunt ullam. Blanditiis, dolor velit? Et libero, optio.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion mb-3">
+                                    <a class="accordion__button" href="#accordion-faq-9" aria-controls="accordion-faq-9"
+                                        data-toggle="collapse" role="button" aria-expanded="false">
+                                        Выездной специалист привез вещи, но меня не удовлетворяет качество стирки. Что
+                                        делать?
+                                    </a>
+                                    <div class="collapse" id="accordion-faq-9">
+                                        <div class="accordion__panel">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias commodi
+                                            consequuntur dolor expedita facere laborum nam, officiis provident quos,
+                                            ratione
+                                            rem sed sunt ullam. Blanditiis, dolor velit? Et libero, optio.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-partners">
+            <div class="container">
+                <h2 class="text text--lg font-weight-bold text-center">Наши клиенты</h2>
+                <div class="row justify-content-center mb-n3">
+                    <div class="col-6 col-sm-4 col-lg mb-3">
+                        <a href="#" class="partner-logo">
+                            <img src="../img/partners-logo/partner-logo-1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg mb-3">
+                        <a href="#" class="partner-logo">
+                            <img src="../img/partners-logo/partner-logo-2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg mb-3">
+                        <a href="#" class="partner-logo">
+                            <img src="../img/partners-logo/partner-logo-3.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg mb-3">
+                        <a href="#" class="partner-logo">
+                            <img src="../img/partners-logo/partner-logo-4.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg mb-3">
+                        <a href="#" class="partner-logo">
+                            <img src="../img/partners-logo/partner-logo-5.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-reviews">
+            <div class="container">
+                <h2 class="text text--lg font-weight-bold text-center">Отзывы</h2>
+                <div class="row mb-n4">
+                    <div class="col-md-6 mb-4">
+                        <div class="video">
+                            <div class="video__box">
+                                <iframe class="video__control" width="1280" height="720"
+                                    src="https://www.youtube.com/embed/LXb3EKWsInQ" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="video">
+                            <div class="video__box">
+                                <iframe class="video__control" width="1280" height="720"
+                                    src="https://www.youtube.com/embed/LXb3EKWsInQ" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center pt-4 pt-sm-5">
+                    <a href="#" class="button button--color-pink button--theme-default px-sm-5">
+                        <span class="button__text">Смотреть все отзывы о “Прачка Сочи”</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__line">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-auto pr-lg-5 d-flex justify-content-center">
+                        <a href="#" class="footer__logo logo d-flex">
+                            <img src="../img/logo-white.svg" alt="Прачка Сочи">
+                        </a>
+                    </div>
+                    <div class="col-lg pl-xl-5">
+                        <ul class="footer__list list">
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__link">Тарифы</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__link">Все услуги</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__link">Прайс-лист</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__link">B2B</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__link">Отзывы</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-auto d-flex flex-column align-items-center">
+                        <a href="tel:+79181234567" class="footer__tel">+7 (918) 12 34 567</a>
+                        <div class="footer__social">
+                            <div class="footer__text">Рассчитать заказ:</div>
+                            <div class="social-network">
+                                <ul class="social-network__list list">
+                                    <li class="social-network__list-item">
+                                        <a href="#" class="social-network__image" target="_blank">
+                                            <img src="../img/icons/social-white-wp.svg" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="social-network__list-item">
+                                        <a href="#" class="social-network__image" target="_blank">
+                                            <img src="../img/icons/social-white-vb.svg" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-auto d-flex flex-column align-items-center">
+                        <a href="#" class="footer__button button button--color-white-mix button--theme-regular mb-2">
+                            <span class="button__text">Заказать стирку</span>
+                        </a>
+                        <a href="#" class="footer__policy">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="drawer" class="drawer js-drawer sr-only">
+        <div class="drawer__inner">
+            <div class="drawer__header d-flex align-items-center">
+                <a href="/" class="drawer__logo logo">
+                    <img src="../img/logo.svg" alt="">
+                </a>
+                <button data-drawer="drawer" class="hamburger hamburger--3dx d-flex ml-auto js-hamburger" type="button">
+                    <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+                </button>
+            </div>
+            <div class="drawer__main">
+                <a href="#" class="button shop-cart mb-4 ml-2">
+                    <span class="shop-cart__inner">
+                        <span class="shop-cart__header">
+                            <span class="shop-cart__image"></span>
+                            <span class="shop-cart__balloon" data-total-count>0</span>
+                        </span>
+                        <span class="shop-cart__main">
+                            <span class="shop-cart__text">1245 р</span>
+                        </span>
+                    </span>
+                </a>
+                <div class="drawer__nav">
+                    <ul class="drawer__nav-list list">
+                        <li class="drawer__nav-item">
+                            <a href="#" class="drawer__nav-link">Тарифы</a>
+                        </li>
+                        <li class="drawer__nav-item">
+                            <a href="#" class="drawer__nav-link">Все услуги</a>
+                        </li>
+                        <li class="drawer__nav-item">
+                            <a href="#" class="drawer__nav-link">Прайс-лист</a>
+                        </li>
+                        <li class="drawer__nav-item">
+                            <a href="#" class="drawer__nav-link">B2B</a>
+                        </li>
+                        <li class="drawer__nav-item">
+                            <a href="#" class="drawer__nav-link">Отзывы</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="drawer__footer">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                    <a href="tel:+79302333332" class="drawer__tel">+7 <span>(930)</span> 23 33 332</a>
+                    <div class="social-network">
+                        <ul class="social-network__list list">
+                            <li class="social-network__list-item">
+                                <a href="#" class="social-network__image" target="_blank">
+                                    <img src="../img/icons/social-wp.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="social-network__list-item">
+                                <a href="#" class="social-network__image" target="_blank">
+                                    <img src="../img/icons/social-vb.svg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="button" class="button button--color-pink button--theme-light button--empty w-100">
+                    <span class="button__text">Связаться</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- /.drawer -->
+    <div class="popup-fancybox popup-fancybox--theme-map" id="map-popup" style="display: none;">
+        <div class="popup-fancybox__inner">
+            <div class="map">
+                <div class="map__input pb-4">
+                    <div id="suggest-input">
+                        <div class="input-search">
+                            <label class="input-search__label">
+                                <input type="text" class="input-search__control" placeholder="Введите текст для поиска">
+                            </label>
+                            <button type="button" class="button input-search__button"></button>
+                        </div>
+                        <div class="input-validation__message"></div>
+                    </div>
+                </div>
+                <div class="map__box">
+                    <div class="map__control" id="map-main"></div>
+                    <button type="button" data-yandex-submit
+                        class="map__button button button--color-pink button--theme-default mb-2">
+                        <span class="button__text">Подтвердить</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- /#CallBack -->
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">×</span>
+            <div class="form" id="formModal">
+                <div class="form__box">
+                    <form class="js-form-validation" novalidate="novalidate">
+                        <div class="form__title form__title--gray font-weight-bold text-center">
+                            Быстрая
+                            заявка
+                        </div>
+                        <div class="input input--theme-default mb-2">
+                            <label class="input__label">
+                                <input type="text" name="name" class="input__control" placeholder="Имя" required="">
+                            </label>
+                            <div class="input-validation__message"></div>
+                        </div>
+                        <div class="input input--theme-default mb-2">
+                            <label class="input__label">
+                                <input type="tel" name="tel" class="input__control" placeholder="Телефон" required="">
+                            </label>
+                            <div class="input-validation__message"></div>
+                        </div>
+                        <div class="field-location mb-3">
+                            <label class="field-location__label">
+                                <input data-yandex-input="" type="text" name="address" class="field-location__input"
+                                    placeholder="Адрес доставки">
+                            </label>
+                            <a href="#map-popup" data-fancybox-map="" class="field-location__button button">
+                                <span class="field-location__text">Найти меня</span>
+                            </a>
+                        </div>
+                        <div class="checkbox mb-3 pb-1">
+                            <label class="checkbox__label">
+                                <input type="checkbox" name="agreement" class="checkbox__control">
+                                <span class="checkbox__text">
+                                    Даю согласие на обработку персональных данных и подтверждаю свое
+                                    ознакомление с <a href="#">политикой обработки персональных
+                                        данных</a> компании
+                                </span>
+                            </label>
+                            <div class="input-validation__message"></div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="button button--color-pink button--theme-default"
+                                id="submetSucces">
+                                <span class="button__text">Отправить</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /#map-popup -->
+            <div class="popup-fancybox popup-fancybox--theme-successful" id="successful-send" style="display: none;">
+                <div class="popup-fancybox__inner">
+                    <div class="icon icon--successful d-flex mx-auto mb-3">
+                        <svg width="70" height="70" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"
+                            fill="currentColor">
+                            <path
+                                d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M26,50C12.767,50,2,39.233,2,26 S12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z" />
+                            <path
+                                d="M38.252,15.336l-15.369,17.29l-9.259-7.407c-0.43-0.345-1.061-0.274-1.405,0.156c-0.345,0.432-0.275,1.061,0.156,1.406 l10,8C22.559,34.928,22.78,35,23,35c0.276,0,0.551-0.114,0.748-0.336l16-18c0.367-0.412,0.33-1.045-0.083-1.411 C39.251,14.885,38.62,14.922,38.252,15.336z" />
+                        </svg>
+                    </div>
+                    <div class="text-center">
+                        Спасибо!
+                        <br>Ваша заявка отправлена.
+                        <br>В ближайшее время мы с Вами свяжемся!
+                    </div>
+                </div>
+            </div>
+            <!-- /#successful-send -->
+        </div>
+
+    </div>
+
+    <!-- Scrool icon -->
+    <a href="#" class="to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- scrool top -->
+
+
+
+    <!-- modal -->
+
+</body>
+
+</html>

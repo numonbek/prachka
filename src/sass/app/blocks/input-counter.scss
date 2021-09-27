@@ -1,0 +1,48 @@
+.input-counter {
+    display: flex;
+    align-items: center;
+
+    &__decrement,
+    &__increment {
+        padding: 8px;
+
+        &::before {
+            content: '';
+            border: 4px solid transparent;
+            border-right: 6px solid #303FF0;
+            border-left-width: 0;
+            transition: transform .1s ease-in;
+        }
+
+        &:hover, &:focus {
+            &::before {
+                transform: scale(1.7);
+            }
+        }
+    }
+
+    &__increment {
+        &::before {
+            border-left: 6px solid #303FF0;
+            border-right-width: 0;
+        }
+    }
+
+    &__label {
+        display: flex;
+        margin-bottom: 0;
+    }
+
+    &__result {
+        $font-size: 14;
+        font-weight: 300;
+        font-size: em($font-size);
+        width: em(37, $font-size);
+        text-overflow: ellipsis;
+        overflow: hidden;
+        line-height: normal;
+        color: #646464;
+        text-align: center;
+        white-space: nowrap;
+    }
+}

@@ -1,0 +1,86 @@
+.card-catalog {
+    &__inner {
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        border-radius: em(5);
+        padding: em(18) em(24) em(24);
+        background-color: #faf9f7;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        color: #464646;
+        transition: box-shadow .1s ease-in;
+
+        &::before {
+            content: '';
+            padding-top: 60%;
+        }
+
+        &:hover, &:focus {
+            box-shadow: 0 0 em(15) #deddd8;
+        }
+    }
+
+    &__content {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    &__title {
+        font-weight: bold;
+        $font-size: 32;
+        font-size: em($font-size);
+        margin-bottom: 0;
+        line-height: em(37, $font-size);
+        max-width: em(265, $font-size);
+        text-shadow: 0 em(3) em(10) rgba(#fff, .3);
+        color: #303FF0;
+
+        a {
+            color: inherit;
+        }
+    }
+
+    &__list {
+        padding: em(16) em(24) em(16);
+        margin: 0 em(-24) em(-16) 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__list-item {
+        &:not(:last-child) {
+            margin-bottom: em(3);
+        }
+    }
+
+    &__link {
+        $font-size: 14;
+        font-size: em($font-size);
+        line-height: em(16, $font-size);
+        color: inherit;
+
+        &:hover {
+            color: inherit;
+        }
+    }
+}
+
+
+@media (max-width: 1199px) {
+    .card-catalog {
+        &__list-item {
+            &:not(:last-child) {
+                margin-bottom: em(1);
+            }
+        }
+
+        &__title {
+            font-size: em(24);
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.social-network {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__list-item {
+        &:not(:last-child) {
+            margin-right: em(8);
+        }
+    }
+
+    &__image {
+        display: flex;
+        transition: transform .1s ease-in;
+
+        &:hover, &:focus {
+            transform: scale(1.15);
+        }
+
+        img {
+            width: em(26);
+            height: em(26);
+            object-fit: contain;
+        }
+    }
+}

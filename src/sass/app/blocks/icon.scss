@@ -1,0 +1,30 @@
+.icon {
+    display: inline-flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+.icon--successful {
+    width: em(86);
+    height: em(86);
+    color: limegreen;
+}
+
+.icon--back {
+    width: em(12);
+    height: em(12);
+    background-image: url(../../../img/icons/arrow-back.svg);
+}
+
+.icon--info {
+    width: em(17);
+    height: em(17);
+    background-image: url(../../../img/icons/info.svg);
+}
