@@ -65,6 +65,12 @@ Encore.setOutputPath("static/")
       filename: "articles-details.html",
     })
   )
+    .addPlugin(
+        new HtmlWebpackPlugin({
+            template: "src/templates/map-example.html",
+            filename: "map-example.html",
+        })
+    )
   .addPlugin(
     new HtmlWebpackPlugin({
       template: "src/templates/components.html",

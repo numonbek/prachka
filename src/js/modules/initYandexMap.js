@@ -5,6 +5,7 @@ const { ymaps } = window;
 let mapMainInstance;
 
 function initMapMain() {
+
   const mapElement = document.getElementById("map-main");
   if (!mapElement) return;
   if (mapMainInstance) return;
@@ -85,6 +86,26 @@ function initMapMain() {
   );
   mapMainInstance.geoObjects.add(placemark);
 
+  // TEST
+
+    const polygon = new ymaps.Polygon([
+        // Координаты внешнего контура.
+        [[-80, 60], [-90, 50], [-60, 40], [-80, 60]],
+        // Координаты внутреннего контура.
+        [[-90, 80], [-90, 30], [-20, 40], [-90, 80]]
+    ], {
+        hintContent: "Многоугольник"
+    }, {
+        fillColor: '#6699ff',
+        // Делаем полигон прозрачным для событий карты.
+        interactivityModel: 'default#transparent',
+        strokeWidth: 8,
+        opacity: 0.5
+    });
+    mapMainInstance.geoObjects.add(polygon);
+    mapMainInstance.setBounds(polygon.geometry.getBounds());
+    
+
   const location = ymaps.geolocation.get({
     mapStateAutoApply: true,
   });
@@ -151,5 +172,68 @@ function initMapMain() {
 }
 
 function initYandexMap() {}
+
+function initTestMap() {
+
+
+    const mapElement = document.getElementById("map-test");
+    if (!mapElement) return;
+
+    console.log(mapElement)
+
+    const mapMainInstance = new ymaps.Map(mapElement, {
+        center: [43.585472, 39.723089], // Сочи
+        zoom: 15,
+        controls: ["fullscreenControl", "geolocationControl", "zoomControl"],
+    });
+
+    // Создаем инстанцию геометрии многоугольника (указываем координаты вершин контуров).
+    const polygonGeometry = new ymaps.Polygon([
+            // Внешний контур.
+            // The coordinates of the vertices of the external contour.
+            [
+                [43.53738334752639, 39.80682087405762],
+                [43.546855505663665, 39.78421776535842],
+                [43.53789539412201, 39.806467700484205],
+                [43.55555833886404, 39.80540817976393],
+                [43.567330759975974, 39.79304710469404],
+                [43.57679821202318, 39.78563045965214],
+                [43.59286534679838, 39.78328483775883],
+            ],
+
+        ], {}, {
+            fillColor: '#d95757',
+            // Делаем полигон прозрачным для событий карты.
+            interactivityModel: 'default#transparent',
+            strokeWidth: 1,
+            opacity: 1
+         })
+
+        const polygonGeometry2 = new ymaps.Polygon([
+            // Внешний контур.
+            // The coordinates of the vertices of the external contour.
+                [
+                    [43.6301434844664, 39.7225190562871],
+                    [43.61502294222331, 39.750144608071054],
+                    [43.58769877449773, 39.74677563834132]
+                ],
+
+        ], {}, {
+            fillColor: '#39e358',
+            // Делаем полигон прозрачным для событий карты.
+            interactivityModel: 'default#transparent',
+            strokeWidth: 1,
+            opacity: 0.5
+        })
+
+        mapMainInstance.geoObjects.add(polygonGeometry);
+        mapMainInstance.setBounds(polygonGeometry.geometry.getBounds());
+
+        mapMainInstance.geoObjects.add(polygonGeometry2);
+        mapMainInstance.setBounds(polygonGeometry2.geometry.getBounds());
+
+}
+
+ymaps.ready(initTestMap);
 
 export { initMapMain, initYandexMap };
