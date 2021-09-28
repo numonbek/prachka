@@ -732,15 +732,21 @@
                 <div class="row">
                     <div class="col-lg-6 mb-4 mb-lg-0">
                         <div class="map">
-                            <div class="map__box">
-                                <iframe class="map__control"
-                                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A94db85c5658cac1650ffcf3b2efdd8a06e0de6c068420d5d3e36bec7e2958b6c&amp;source=constructor"
-                                    width="100%" height="400" frameborder="0"></iframe>
+                            <div class="map__box map__box--poligon">
+                                <div id="map-test" style="height: 400px; width: 100%;"></div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="section-map__content mb-4 mb-xl-5">
+                        <div class="service-area">
+                            <div class="service-area__title">Стоимость выездного обслуживания:</div>
+                            <div class="service-area__cost">
+                                <div class="area-cost area-cost--fiolet">500 руб</div>
+                                <div class="area-cost area-cost--blue">300 руб</div>
+                                <div class="area-cost area-cost--red">0 руб</div>
+                            </div>
+                        </div>
+                        <div class="section-map__content mb-4 mb-xl-5 mb-xl-5--fix">
                             <p>Мы доставляем точно в срок!</p>
                             <p>Как это сделать в таком большом и загруженном городе как Сочи?</p>
                             <p>Выделить зону обслуживания!</p>
@@ -1154,29 +1160,29 @@
                 <h2 class="text text--lg font-weight-bold text-center">Наши клиенты</h2>
                 <div class="row justify-content-center mb-n3">
                     <div class="col-6 col-sm-4 col-lg mb-3">
-                        <a href="#" class="partner-logo">
+                        <div class="partner-logo">
                             <img src="../img/partners-logo/partner-logo-1.png" alt="">
-                        </a>
+                        </div>
                     </div>
                     <div class="col-6 col-sm-4 col-lg mb-3">
-                        <a href="#" class="partner-logo">
+                        <div class="partner-logo">
                             <img src="../img/partners-logo/partner-logo-2.png" alt="">
-                        </a>
+                        </div>
                     </div>
                     <div class="col-6 col-sm-4 col-lg mb-3">
-                        <a href="#" class="partner-logo">
+                        <div class="partner-logo">
                             <img src="../img/partners-logo/partner-logo-3.png" alt="">
-                        </a>
+                        </div>
                     </div>
                     <div class="col-6 col-sm-4 col-lg mb-3">
-                        <a href="#" class="partner-logo">
+                        <div class="partner-logo">
                             <img src="../img/partners-logo/partner-logo-4.png" alt="">
-                        </a>
+                        </div>
                     </div>
                     <div class="col-6 col-sm-4 col-lg mb-3">
-                        <a href="#" class="partner-logo">
+                        <div class="partner-logo">
                             <img src="../img/partners-logo/partner-logo-5.png" alt="">
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1290,7 +1296,7 @@
                             <span class="shop-cart__balloon" data-total-count>0</span>
                         </span>
                         <span class="shop-cart__main">
-                            <span class="shop-cart__text">1245 р</span>
+                            <span class="shop-cart__text" data-total-price>1245 р</span>
                         </span>
                     </span>
                 </a>

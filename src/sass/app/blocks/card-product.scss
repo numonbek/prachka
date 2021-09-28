@@ -27,7 +27,7 @@
 
     &__image {
         position: relative;
-        padding-top: 94.0789474%;
+        padding-top: 78.0789474%;
 
         img {
             position: absolute;
@@ -44,5 +44,9 @@
 
     &__button {
         min-width: em(140);
+    }
+    &__price{
+        text-align: center;
+        color:red;
     }
 }

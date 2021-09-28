@@ -25,3 +25,67 @@
         padding: em(40) 0 em(55);
     }
 }
+
+
+/* ====== section map add ===== */
+
+.service-area{
+    &__title{
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 150%;
+        /* or 27px */
+        padding-bottom: 5px;
+
+
+        color: #000000;
+    }
+    &__cost{
+        display: flex;
+    }
+}
+
+
+.area-cost{
+    margin-right: 20px;
+    &--fiolet{
+        
+        &::before{
+            content:'';
+            display: inline-flex;
+            width: 20px;
+            height: 14px;
+            margin-right: 6px;
+            
+            background-color: #b72dfc;
+        }
+    }
+    &--blue{
+       
+        &::before{
+            content: '';
+            display: inline-flex;
+            width: 20px;
+            height: 14px;
+            margin-right: 6px;
+            background-color: #2b82cb;
+        }
+    }
+    &--red{
+      
+        &::before{
+            content: '';
+            display: inline-flex;
+            width: 20px;
+            height: 14px;
+            margin-right: 6px;
+            background-color: #ea4e4f;
+        }
+    }
+}
+
+.mb-xl-5--fix{
+    margin-bottom: 2rem !important;
+}

@@ -7,3 +7,61 @@
         padding: 0;
     }
 }
+
+/* ==== add basket delete === */
+.card-basket__footer{
+    & a{
+        text-decoration: none;
+    }
+}
+.catalog-delete{
+    margin-top:5px;
+    background-color: #ffffff;
+    color: #303FF0;
+    border-color: #303FF0;
+    &:hover{
+        background-color: #303FF0;
+        color: #ffffff;
+        border-color: #303FF0;
+    }
+}
+.button__delete{
+    max-width: 178px;
+    display: block;
+    /* width: 100%; */
+    margin: 0 auto;
+    max-height: 32px;
+    padding: 0 1.625em;
+    border-radius: 0.3125em;
+    border: 1px solid;
+    line-height: 1.2;
+    padding: 0 33px;
+    margin-top: 5px;
+    text-decoration: none;
+
+    background-color: #4250e9;
+    border-color: #303FF0;
+   
+    transition: all .3s ease-in;
+    &:hover{
+        background-color: #0411d1;
+       
+        
+    }
+    
+    &--fix{
+        
+    }
+}
+
+.button__text--delete{
+    color: #ffffff;
+    width: 100%;
+    display: flex;
+    /* padding: 10px; */
+    /* margin: 0 auto; */
+    /* height: 100%; */
+    padding: 4px 0;
+    justify-content: center;
+    font-size: 1.125em;
+}

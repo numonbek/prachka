@@ -10,10 +10,11 @@ import initFancyBox from "./modules/initFancyBox";
 import initSwiper from "./modules/initSwiper";
 import initInputCounter from "./modules/initInputCounter";
 import { initIsotope } from "./modules/initIsotope";
-import initBasket from "./modules/initBasket";
+import { initBasket } from "./modules/initBasket";
 import { dragDrop } from "./modules/drag-n-drops";
 import { scroolTop } from "./modules/scrool-top";
 import { openModal } from "./modules/modal";
+import { clearBasket } from "./modules/clear-basket";
 
 // eslint-disable-next-line no-multi-assign
 global.$ = global.jQuery = $;
@@ -31,4 +32,5 @@ ready(() => {
   dragDrop();
   scroolTop();
   openModal();
+  clearBasket();
 });

@@ -1,4 +1,5 @@
-import { updateIsotope } from './initIsotope';
+/* eslint-disable */
+import { updateIsotope } from "./initIsotope";
 
 const basket = {
   products: {},
@@ -8,14 +9,14 @@ const basket = {
 
 function sendAjax(data, isDelete = false) {
   // eslint-disable-next-line no-console
-  console.log('Отправка данных!', data, isDelete);
+  console.log("Отправка данных!", data, isDelete);
 }
 
 function toggleBasket() {
   if (Object.keys(basket.products).length) {
-    document.body.classList.add('page--show-basket');
+    document.body.classList.add("page--show-basket");
   } else {
-    document.body.classList.remove('page--show-basket');
+    document.body.classList.remove("page--show-basket");
   }
 }
 
@@ -23,11 +24,10 @@ function updateTotalValues() {
   let totalPrice = 0;
   let totalCount = 0;
 
-  Object.values(basket.products)
-    .forEach((product) => {
-      totalPrice += product.price * product.count;
-      totalCount += product.count;
-    });
+  Object.values(basket.products).forEach((product) => {
+    totalPrice += product.price * product.count;
+    totalCount += product.count;
+  });
 
   basket.totalPrice = totalPrice > 0 ? totalPrice : 0;
   basket.totalCount = totalCount > 0 ? totalCount : 0;
@@ -38,15 +38,14 @@ function renderBasket() {
   toggleBasket();
   updateIsotope();
 
-  const totalPriceElements = document.querySelectorAll('[data-total-price]');
-  const totalCountElements = document.querySelectorAll('[data-total-count]');
-  const basketElement = document.getElementById('basket');
-  const group = basketElement.querySelector('.card-basket__group');
+  const totalPriceElements = document.querySelectorAll("[data-total-price]");
+  const totalCountElements = document.querySelectorAll("[data-total-count]");
+  const basketElement = document.getElementById("basket");
+  const group = basketElement.querySelector(".card-basket__group");
 
-  group.innerHTML = '';
+  group.innerHTML = "";
 
-  Object
-    .values(basket.products)
+  Object.values(basket.products)
     .sort((a, b) => {
       if (a.title > b.title) return 1;
       if (a.title < b.title) return -1;
@@ -112,14 +111,14 @@ function changeProductCount(id, count) {
 }
 
 function initBasket() {
-  const basketElement = document.getElementById('basket');
+  const basketElement = document.getElementById("basket");
   if (!basketElement) return;
 
   renderBasket();
 
-  document.addEventListener('click', (e) => {
-    const btnAdd = e.target.closest('[data-basket-add]');
-    const btnToggle = e.target.closest('.js-toggle-basket');
+  document.addEventListener("click", (e) => {
+    const btnAdd = e.target.closest("[data-basket-add]");
+    const btnToggle = e.target.closest(".js-toggle-basket");
 
     if (btnAdd) {
       const productData = {
@@ -128,20 +127,20 @@ function initBasket() {
         title: btnAdd.dataset.productTitle,
         count: 1,
       };
-      const cardBasket = document.querySelector('#basket .card-basket');
+      const cardBasket = document.querySelector("#basket .card-basket");
 
       addDataProduct(productData);
-      cardBasket.classList.add('card-basket--opened');
+      cardBasket.classList.add("card-basket--opened");
     }
 
     if (btnToggle) {
-      const cardBasket = btnToggle.closest('.card-basket');
-      cardBasket.classList.toggle('card-basket--opened');
+      const cardBasket = btnToggle.closest(".card-basket");
+      cardBasket.classList.toggle("card-basket--opened");
     }
   });
 
-  basketElement.addEventListener('change', (e) => {
-    const inpCounter = e.target.closest('.js-input-counter');
+  basketElement.addEventListener("change", (e) => {
+    const inpCounter = e.target.closest(".js-input-counter");
     if (!inpCounter) return;
     const { productId } = e.target.dataset;
     const count = +e.target.value;
@@ -150,4 +149,4 @@ function initBasket() {
   });
 }
 
-export default initBasket;
+export { initBasket };

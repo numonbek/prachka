@@ -1,0 +1,11 @@
+.col-xl-8{
+    padding-top: 54px;
+    & a{
+        text-decoration:none;
+    }
+}
+.py-5{
+    &--fix{
+        padding:0;
+    }
+}

@@ -44,11 +44,21 @@
     }
 
     &__main {
+        // overflow: auto;
+        // min-height: 75px;
+        // max-height: calc(100vh - 245px);
+        // padding: 0 em(20);
         overflow: auto;
-        min-height: 75px;
-        max-height: calc(100vh - 245px);
-        padding: 0 em(20);
+        /* min-height: 75px; */
+        max-height: 166px;
+        /* max-height: calc(100vh - 245px); */
+        padding: 0 1.25em;
     }
+
+
+
+
+    
 
     &__footer {
         text-align: center;
@@ -156,3 +166,6 @@
         }
     }
 }
+
+
+

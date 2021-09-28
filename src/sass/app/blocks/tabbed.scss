@@ -1,17 +1,22 @@
 .tabbed {
     &__list {
         display: flex;
-        justify-content: center;
+        justify-content: start;
+        flex-wrap: wrap;
     }
 
     &__list-item {
         overflow: hidden;
-        border-top: 1px solid #303FF0;
-        border-bottom: 1px solid #303FF0;
+        // border-top: 1px solid #303FF0;
+        // border-bottom: 1px solid #303FF0;
+        &:not(:last-child){
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
 
         &:first-child {
             border-radius: em(5) 0 0 em(5);
-            border-left: 1px solid #303FF0;
+            // border-left: 1px solid #303FF0;
 
             .tabbed__link {
                 border-radius: 0 em(5) em(5) 0;
@@ -20,7 +25,7 @@
 
         &:last-child {
             border-radius: 0 em(5) em(5) 0;
-            border-right: 1px solid #303FF0;
+            // border-right: 1px solid #303FF0;
 
             .tabbed__link {
                 border-radius: em(5) 0 0 em(5);
@@ -38,6 +43,7 @@
         text-align: center;
         transition: color .1s ease-in, background-color .1s ease-in;
         color: #303FF0;
+        background-color: #EBEDFA;
 
         &.active,
         &:hover, &:focus {
