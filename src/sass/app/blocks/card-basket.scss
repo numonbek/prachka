@@ -168,4 +168,20 @@
 }
 
 
+.card-basket--opened {
+    .cart-basket-mobile-count {
+        display: none;
+    }
+}
+
+
+.shop-cart {
+
+
+
+    &__count {
+        color: #fff;
+    }
+
+}
 

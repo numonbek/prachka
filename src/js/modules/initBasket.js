@@ -7,6 +7,12 @@ const basket = {
   totalCount: 0,
 };
 
+function resetBasketData() {
+  basket.products = {}
+  basket.totalPrice = 0
+  basket.totalCount = 0
+}
+
 function sendAjax(data, isDelete = false) {
   // eslint-disable-next-line no-console
   console.log("Отправка данных!", data, isDelete);
@@ -110,13 +116,58 @@ function changeProductCount(id, count) {
   renderBasket();
 }
 
+/* eslint-disable */
+function clearBasket() {
+
+  const deleteBtn = document.querySelector('#catalog-delete')
+
+  deleteBtn.addEventListener("click", function (event) {
+
+    const deleteBasket = document.getElementById("catalog-delete");
+    const basketMain = document.querySelector(".card-basket__main");
+    const basketItem = document.querySelector(".card-basket__group");
+    const basketItemc = document.querySelectorAll(".card-basket__item");
+
+    // basketItem.removeChild(basketItemc);
+
+    basketItemc.forEach(el => el.remove())
+    resetBasketData()
+    document.querySelectorAll('span[data-total-price]').forEach(el => {
+      el.innerHTML = '0'
+    })
+    document.querySelectorAll('span[data-total-count]').forEach(el => {
+      el.innerHTML = '0'
+    })
+    // sendAjax((data = null), (isDelete = false));
+
+
+  });
+}
+
+// if (event.target.dataset.counter != undefined) {
+//   // если есть атрибут...
+//   console.log("!!! in cart");
+// }
+//   let deleteBasket = document.getElementById("catalog-delete");
+//   let basketMain = document.querySelector(".card-basket__main");
+
+//   if (deleteBasket.closest(".card-basket__inner")) {
+//     console.log("!!! in cart");
+//   }
+
+
 function initBasket() {
   const basketElement = document.getElementById("basket");
+  const windowInner = window.innerWidth;
+
   if (!basketElement) return;
 
   renderBasket();
+  clearBasket();
+
 
   document.addEventListener("click", (e) => {
+
     const btnAdd = e.target.closest("[data-basket-add]");
     const btnToggle = e.target.closest(".js-toggle-basket");
 
@@ -128,9 +179,11 @@ function initBasket() {
         count: 1,
       };
       const cardBasket = document.querySelector("#basket .card-basket");
-
       addDataProduct(productData);
-      cardBasket.classList.add("card-basket--opened");
+      if(window.innerWidth > 576) {
+        cardBasket.classList.add("card-basket--opened");
+      }
+
     }
 
     if (btnToggle) {
@@ -148,5 +201,6 @@ function initBasket() {
     changeProductCount(productId, count);
   });
 }
+
 
 export { initBasket };
